@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\bin\Debug\net8.0\ClassParameter.exe
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\bin\Debug\net8.0\ClassParameter.deps.json
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\bin\Debug\net8.0\ClassParameter.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\bin\Debug\net8.0\ClassParameter.dll
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\bin\Debug\net8.0\ClassParameter.pdb
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.dll
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\refint\ClassParameter.dll
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.pdb
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ClassParameter.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\ClassParameter\obj\Debug\net8.0\ref\ClassParameter.dll
