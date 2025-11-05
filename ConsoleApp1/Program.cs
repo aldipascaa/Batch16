@@ -1,11 +1,14 @@
-﻿// See https://aka.ms/new-console-template for more information
-class Program
+﻿//Include class libraries/namespace
+
+using System;
+
+namespace namespace
 {
-    static void Main(String[] args)
+    class Program
     {
-        Console.WriteLine("Number for X!");
-        int x = int(Console.ReadLine());
-        Console.WriteLine(x);
+        static void Main(string[] args)
+        {
+            Console.WriteLine("");
+        }
     }
 }
-

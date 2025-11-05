@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\bin\Debug\net8.0\BizzBuzz.exe
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\bin\Debug\net8.0\BizzBuzz.deps.json
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\bin\Debug\net8.0\BizzBuzz.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\bin\Debug\net8.0\BizzBuzz.dll
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\bin\Debug\net8.0\BizzBuzz.pdb
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.dll
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\refint\BizzBuzz.dll
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.pdb
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\BizzBuzz.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\BizzBuzz\obj\Debug\net8.0\ref\BizzBuzz.dll
