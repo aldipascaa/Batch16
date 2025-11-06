@@ -1,0 +1,5 @@
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay1\obj\Debug\net8.0\ExerciseDay1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay1\obj\Debug\net8.0\ExerciseDay1.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay1\obj\Debug\net8.0\ExerciseDay1.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay1\obj\Debug\net8.0\ExerciseDay1.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay1\obj\Debug\net8.0\ExerciseDay1.sourcelink.json
