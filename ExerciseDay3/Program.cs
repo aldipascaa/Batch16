@@ -60,10 +60,30 @@ class Program
     }
 
     static void DemonstrateConstants()
-    { }
+    {
+        Console.WriteLine("3. Constants vs static Readonly:");
+
+        Console.WriteLine($" PI (const): {MathConstants.PI}");
+        Console.WriteLine($" Speed of light (const): {MathConstants.SPEED_OF_LIGHT}");
+        Console.WriteLine($" App Start Time (Static readonly): {MathConstants.ApplicationStartTime}");
+        Console.WriteLine($" Random Seed (static readonly): {MathConstants.RandomSeed}");
+
+        //local constants
+        const int LOCAL_MAX = 100;
+        Console.WriteLine(LOCAL_MAX);
+
+    }
 
     static void DemonstrateMethods()
-    { }
+    {
+        Console.WriteLine($"4. Methods - Object Behaviors: ");
+        var math = new MathOperations();
+        Console.WriteLine($" Substraction: 15 + 25 = {math.Add(15 + 25)}");
+        Console.WriteLine($" Factorial of 5: {math.CalculateFactorial(5)}");
+
+        Console.WriteLine($" Power (int): 2^8 = {math.Power(2, 8)}");
+        Console.WriteLine($" Power (Double): 2.5^3 = {math.Power(2.5,3)}");
+    }
 
     static void DemonstrateConstructors()
     { }
@@ -93,4 +113,5 @@ class Program
 
 
 }
+
 
