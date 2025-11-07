@@ -128,10 +128,27 @@ class Program
     }
 
     static void DemonstrateIndexers()
-    { }
+    {
+        Console.WriteLine("7. Indexers");
+    }
 
     static void DemonstrateObjectFeatures()
-    { }
+    {
+        Console.WriteLine("8. Object Features");
+
+        var bunny = new Bunny
+        {
+            Name = "Hoppy",
+            LikesCarrots = true,
+            LikesHumans = true,
+            Age = 4
+        };
+
+        bunny.Feed("carrots");
+        bunny.Hop();
+        bunny.Pet();
+        bunny.DisplayInfo();
+    }
 
     static void DemonstrateStaticFeatures()
     { }
