@@ -34,7 +34,7 @@ class Program
     {
         Console.WriteLine("1. Basic Classes");
         //Create employee instances from Employee class blueprint
-        var empoyee = new Employee("al", 25);
+        var empoyee = new Employee("Aldi", 25);
         var manager = new Employee("Bob", 30);
 
         Console.WriteLine($" Employee: {empoyee.Name}");
@@ -56,6 +56,11 @@ class Program
         // Readonly fields
         Console.WriteLine($"Octopus 1 ID (readonly): {octopus.Id}");
         Console.WriteLine($"Octopus 2 ID (readonly): {octopus2.Id}");
+
+        octopus.Hide();
+        octopus2.Feed();
+        octopus2.Sleep();
+        octopus.ToString();
            
     }
 
@@ -86,10 +91,41 @@ class Program
     }
 
     static void DemonstrateConstructors()
-    { }
+    {
+        Console.WriteLine("5. Constructors");
+
+        var Car1 = new Car("Toyota");
+        var Car2 = new Car("Honda", "Civic");
+        var Car3 = new Car("BMW", "X5", 2023);
+
+        Console.WriteLine($" Car 1: {Car1.Make} {Car1.Model} {Car1.Year}");
+        Console.WriteLine($" Car 2: {Car2.Make} {Car2.Model} {Car2.Year}");
+        Console.WriteLine($" Car 3: {Car3.Make} {Car3.Model} {Car3.Year}");
+
+    }
 
     static void DemonstrateProperties()
-    { }
+    {
+        Console.WriteLine("6. Properties - Controlled Data Access:");
+
+        var stock = new Stock();
+
+        stock.Symbol = "MSFT";
+        stock.CompanyName = "Microsoft Corporation";
+        Console.WriteLine($" Stock: {stock.Symbol} - {stock.CompanyName}");
+
+        stock.CurrentPrice = 350.75m;
+        Console.WriteLine($" Current price: ${stock.CurrentPrice:F2}");
+
+        try
+        {
+            stock.CurrentPrice = -10;
+        }
+        catch(ArgumentException ex)
+        {
+            Console.WriteLine($" x {ex.Message}");
+        }
+    }
 
     static void DemonstrateIndexers()
     { }
