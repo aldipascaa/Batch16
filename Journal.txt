@@ -1,0 +1,42 @@
+Classes
+
+Fields: variable that store the state of an object
+
+"Instance Fields
+Characteristics:
+-Each object instance maintains its own copy
+-values can differ between different object
+-Modified independently for each object
+-Accessed through object instances 
+
+Ex:
+// Each Employee object has its own name and salary
+Employee emp1 = new Employee { Name = "John", Salary = 50000 };
+Employee emp2 = new Employee { Name = "Sarah", Salary = 60000 };
+// emp1.Name and emp2.Name are completely independent
+
+
+"Static Fields
+Characteristics:
+-Shared accross all instance of the class
+-exists even before any objects are created
+-modified through the class name not instance
+-useful for counters, shared configuration of class level data
+
+"readonly Fields
+Characteristic:
+-Can be assigned only at declaration or in constructors
+-cannot be modified after object construction
+-profides compile time safety for immutable data
+-can be instance specific or static
+
+Properties: Constrolled Access to Object Data
+Characteristics:
+-Compiler generates hidden backing fields automatically
+-reduces boilerplate code for simple get/set operations
+-maintains encapsulation without extra complexity
+-can include access modifiers
+
+properties with backing fields
+-full control over get and set operations
+-enable

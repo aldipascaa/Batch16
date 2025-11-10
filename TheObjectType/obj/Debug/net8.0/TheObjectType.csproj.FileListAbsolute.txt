@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\bin\Debug\net8.0\TheObjectType.exe
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\bin\Debug\net8.0\TheObjectType.deps.json
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\bin\Debug\net8.0\TheObjectType.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\bin\Debug\net8.0\TheObjectType.dll
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\bin\Debug\net8.0\TheObjectType.pdb
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.dll
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\refint\TheObjectType.dll
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.pdb
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\TheObjectType.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\TheObjectType\obj\Debug\net8.0\ref\TheObjectType.dll
