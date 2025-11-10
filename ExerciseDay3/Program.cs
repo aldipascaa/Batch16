@@ -147,7 +147,7 @@ class Program
         bunny.Feed("carrots");
         bunny.Hop();
         bunny.Pet();
-        bunny.DisplayInfo();
+        Console.WriteLine(bunny);
     }
 
     static void DemonstrateStaticFeatures()
