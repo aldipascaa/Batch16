@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\Nested\bin\Debug\net8.0\Nested.exe
+C:\Users\aldipasca\Documents\Batch16\Nested\bin\Debug\net8.0\Nested.deps.json
+C:\Users\aldipasca\Documents\Batch16\Nested\bin\Debug\net8.0\Nested.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\Nested\bin\Debug\net8.0\Nested.dll
+C:\Users\aldipasca\Documents\Batch16\Nested\bin\Debug\net8.0\Nested.pdb
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.dll
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\refint\Nested.dll
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.pdb
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\Nested.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\Nested\obj\Debug\net8.0\ref\Nested.dll

@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\Enums\bin\Debug\net8.0\Enums.exe
+C:\Users\aldipasca\Documents\Batch16\Enums\bin\Debug\net8.0\Enums.deps.json
+C:\Users\aldipasca\Documents\Batch16\Enums\bin\Debug\net8.0\Enums.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\Enums\bin\Debug\net8.0\Enums.dll
+C:\Users\aldipasca\Documents\Batch16\Enums\bin\Debug\net8.0\Enums.pdb
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.dll
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\refint\Enums.dll
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.pdb
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\Enums.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\Enums\obj\Debug\net8.0\ref\Enums.dll

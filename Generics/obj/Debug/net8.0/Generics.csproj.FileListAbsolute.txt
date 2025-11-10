@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\Generics\bin\Debug\net8.0\Generics.exe
+C:\Users\aldipasca\Documents\Batch16\Generics\bin\Debug\net8.0\Generics.deps.json
+C:\Users\aldipasca\Documents\Batch16\Generics\bin\Debug\net8.0\Generics.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\Generics\bin\Debug\net8.0\Generics.dll
+C:\Users\aldipasca\Documents\Batch16\Generics\bin\Debug\net8.0\Generics.pdb
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.dll
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\refint\Generics.dll
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.pdb
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\Generics.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\Generics\obj\Debug\net8.0\ref\Generics.dll
