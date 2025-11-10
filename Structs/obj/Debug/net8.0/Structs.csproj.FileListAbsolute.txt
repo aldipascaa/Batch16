@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\Structs\bin\Debug\net8.0\Structs.exe
+C:\Users\aldipasca\Documents\Batch16\Structs\bin\Debug\net8.0\Structs.deps.json
+C:\Users\aldipasca\Documents\Batch16\Structs\bin\Debug\net8.0\Structs.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\Structs\bin\Debug\net8.0\Structs.dll
+C:\Users\aldipasca\Documents\Batch16\Structs\bin\Debug\net8.0\Structs.pdb
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.dll
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\refint\Structs.dll
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.pdb
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\Structs.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\Structs\obj\Debug\net8.0\ref\Structs.dll
