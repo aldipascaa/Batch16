@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\bin\Debug\net8.0\SecondLogicExercise.exe
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\bin\Debug\net8.0\SecondLogicExercise.deps.json
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\bin\Debug\net8.0\SecondLogicExercise.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\bin\Debug\net8.0\SecondLogicExercise.dll
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\bin\Debug\net8.0\SecondLogicExercise.pdb
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.dll
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\refint\SecondLogicExercise.dll
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.pdb
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\SecondLogicExercise.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\SecondLogicExercise\obj\Debug\net8.0\ref\SecondLogicExercise.dll
