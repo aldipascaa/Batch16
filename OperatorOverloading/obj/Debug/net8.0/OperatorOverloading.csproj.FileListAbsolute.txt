@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\bin\Debug\net8.0\OperatorOverloading.exe
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\bin\Debug\net8.0\OperatorOverloading.deps.json
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\bin\Debug\net8.0\OperatorOverloading.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\bin\Debug\net8.0\OperatorOverloading.dll
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\bin\Debug\net8.0\OperatorOverloading.pdb
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.dll
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\refint\OperatorOverloading.dll
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.pdb
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\OperatorOverloading.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\OperatorOverloading\obj\Debug\net8.0\ref\OperatorOverloading.dll

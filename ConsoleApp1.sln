@@ -39,6 +39,18 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Nested", "Nested\Nested.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Generics", "Generics\Generics.csproj", "{2F3722F9-4BEC-4713-A111-16613168CC01}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseDay5", "ExerciseDay5\ExerciseDay5.csproj", "{97D4F333-0782-4D03-81D7-8119EE1189CE}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Delegates", "Delegates\Delegates.csproj", "{63D14C3E-FC01-4B7A-8E8A-4158DB40E8FA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "EventHandler", "EventHandler\EventHandler.csproj", "{5CA44790-C22D-4F42-B053-03539EC78543}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryStatementsAndExceptions", "TryStatementsAndExceptions\TryStatementsAndExceptions.csproj", "{0EE3E3D6-CE13-4676-B0B0-320618AAA1C1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableValueTypes", "NullableValueTypes\NullableValueTypes.csproj", "{7AC28003-0D69-4B10-86A3-63D16F4FBAF3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading", "OperatorOverloading\OperatorOverloading.csproj", "{21AB419A-A758-4580-8358-0BF60984CB0C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -124,5 +136,29 @@ Global
 		{2F3722F9-4BEC-4713-A111-16613168CC01}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2F3722F9-4BEC-4713-A111-16613168CC01}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2F3722F9-4BEC-4713-A111-16613168CC01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{97D4F333-0782-4D03-81D7-8119EE1189CE}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{97D4F333-0782-4D03-81D7-8119EE1189CE}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{97D4F333-0782-4D03-81D7-8119EE1189CE}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{97D4F333-0782-4D03-81D7-8119EE1189CE}.Release|Any CPU.Build.0 = Release|Any CPU
+		{63D14C3E-FC01-4B7A-8E8A-4158DB40E8FA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{63D14C3E-FC01-4B7A-8E8A-4158DB40E8FA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{63D14C3E-FC01-4B7A-8E8A-4158DB40E8FA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{63D14C3E-FC01-4B7A-8E8A-4158DB40E8FA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5CA44790-C22D-4F42-B053-03539EC78543}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5CA44790-C22D-4F42-B053-03539EC78543}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5CA44790-C22D-4F42-B053-03539EC78543}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5CA44790-C22D-4F42-B053-03539EC78543}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0EE3E3D6-CE13-4676-B0B0-320618AAA1C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0EE3E3D6-CE13-4676-B0B0-320618AAA1C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0EE3E3D6-CE13-4676-B0B0-320618AAA1C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0EE3E3D6-CE13-4676-B0B0-320618AAA1C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7AC28003-0D69-4B10-86A3-63D16F4FBAF3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7AC28003-0D69-4B10-86A3-63D16F4FBAF3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7AC28003-0D69-4B10-86A3-63D16F4FBAF3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7AC28003-0D69-4B10-86A3-63D16F4FBAF3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{21AB419A-A758-4580-8358-0BF60984CB0C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{21AB419A-A758-4580-8358-0BF60984CB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{21AB419A-A758-4580-8358-0BF60984CB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{21AB419A-A758-4580-8358-0BF60984CB0C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

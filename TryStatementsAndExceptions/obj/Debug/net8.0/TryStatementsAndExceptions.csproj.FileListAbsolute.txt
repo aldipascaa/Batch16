@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\bin\Debug\net8.0\TryStatementsAndExceptions.exe
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\bin\Debug\net8.0\TryStatementsAndExceptions.deps.json
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\bin\Debug\net8.0\TryStatementsAndExceptions.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\bin\Debug\net8.0\TryStatementsAndExceptions.dll
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\bin\Debug\net8.0\TryStatementsAndExceptions.pdb
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.dll
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\refint\TryStatementsAndExceptions.dll
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.pdb
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\TryStatementsAndExceptions.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\TryStatementsAndExceptions\obj\Debug\net8.0\ref\TryStatementsAndExceptions.dll
