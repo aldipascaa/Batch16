@@ -864,6 +864,7 @@ public class LoyaltyProgram
 
 
 
+
         //13
         // Return Codes Alternative
 
@@ -1097,7 +1098,13 @@ public class LoyaltyProgram
     //Operator Overloading
     static void OperatorOverloading()
     {
-        
+        using (var enumerator = "beer".GetEnumerator())
+{
+    while (enumerator.MoveNext())
+    {
+        Console.WriteLine(enumerator.Current);
+    }
+}
     }
 }
 
