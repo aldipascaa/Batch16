@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\bin\Debug\net8.0\ExerciseDay7.exe
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\bin\Debug\net8.0\ExerciseDay7.deps.json
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\bin\Debug\net8.0\ExerciseDay7.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\bin\Debug\net8.0\ExerciseDay7.dll
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\bin\Debug\net8.0\ExerciseDay7.pdb
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.dll
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\refint\ExerciseDay7.dll
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.pdb
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ExerciseDay7.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\ExerciseDay7\obj\Debug\net8.0\ref\ExerciseDay7.dll

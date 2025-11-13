@@ -51,6 +51,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NullableValueTypes", "Nulla
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OperatorOverloading", "OperatorOverloading\OperatorOverloading.csproj", "{21AB419A-A758-4580-8358-0BF60984CB0C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseDay7", "ExerciseDay7\ExerciseDay7.csproj", "{80BBA880-6CCA-4500-B10D-6CE38F71949C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -160,5 +162,9 @@ Global
 		{21AB419A-A758-4580-8358-0BF60984CB0C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{21AB419A-A758-4580-8358-0BF60984CB0C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{21AB419A-A758-4580-8358-0BF60984CB0C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{80BBA880-6CCA-4500-B10D-6CE38F71949C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{80BBA880-6CCA-4500-B10D-6CE38F71949C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{80BBA880-6CCA-4500-B10D-6CE38F71949C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{80BBA880-6CCA-4500-B10D-6CE38F71949C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
