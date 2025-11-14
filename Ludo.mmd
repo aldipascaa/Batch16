@@ -1,0 +1,107 @@
+classDiagram
+    GameController-->Game
+    GameController..|> IGameEvent
+    Game--Board
+    Game--Players
+    Game--Dice
+    Board-->Tiles
+    Board-->Pawns
+    Board..>Players
+    Players<-->Pawns
+    Players..>PlayerState
+    Pawns-->Tiles
+    Game..>GameState
+    Pawns..>PawnState
+    Tiles..>TilesType
+
+    class IGameEvent{
+        <<interface>>
+        +event Action<.Game> GameStarted
+        +event Action<.Player, int> DiceRolled
+        +event Action<.Player, Piece, int, int> PawnMoved
+        +event Action<.Player> PlayerChanged
+        +event Action<.Player> PlayerWon
+    }
+    class GameController{
+        +Game CurrentGame
+        +void StartGame()
+        +Void RestartGame()
+        +void OnDiceRolled()
+        +void OnPawnMoved()
+        +void OnPlayerChanged()
+        +void OnPlayerWon()
+        %%event
+        +event Action<.Game> GameStarted
+        +event Action<.Player, int> DiceRolled
+        +event Action<.Player, Piece, int, int> PawnMoved
+        +event Action<.Player> PlayerChanged
+        +event Action<.Player> PlayerWon
+    }
+    class Game{
+        +GameState State
+        +List<Player> Players
+        +Board Board
+        +Dice Dice
+        +Player CurrentPlayer
+        +int CurrentPlayerIndex
+        +int CurrentDiceValue
+
+        +LudoGame(list<Player> Players)
+        +void Start()
+        +void Reset()
+        +void End()
+        +int RollDice()
+        +void MovePawn(Pawn pawn, int steps)
+        +void NextTurn()
+        +bool CheckWin(Player player)
+        +Player GetCurrentPlayer()
+    }
+    class Board{
+        +List<Tiles> MainTrack
+        +void PlacePawn()
+        +void RemovePawn()
+        +void Reset()
+    }
+    class Dice{
+        +random
+        +rollDice()
+        +event Action
+    }
+    class Players{
+        +String Color
+        +List<Pawn> Pawns
+    }
+    class Pawns{
+        +int Position
+        +PawnState State
+        +int StepsMoved
+        +int TrackLength
+        +int GoalLength
+        +bool IsHome()
+        +bool IsActive()
+        +bool IsComplete()
+
+    }
+    class Tiles{
+        +bool isSafeZone
+        +bool isOccupied
+        +getOccupied()
+    }
+    %%ENUMS
+    class GameState{
+        <<Enumeration>>
+        NotStarted
+        Running
+        Finished
+    }
+    class PlayerState{
+        <<Enumeration>>
+        Active
+        Won
+    }
+    class PawnState{
+        <<Enumeration>>
+        Home
+        Active
+        Complete
+    }
