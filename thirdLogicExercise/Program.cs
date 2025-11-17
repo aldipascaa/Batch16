@@ -58,7 +58,7 @@ class Program
                 {3, "foo"},
                 {5, "bar"},
                 {7, "jazz"},
-                {9, "bazz"}
+                {9, "huzz"}
             };
             string output = "";
             foreach (var (key,value) in dictionary)
