@@ -55,6 +55,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ExerciseDay7", "ExerciseDay
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LudoGame", "LudoGame\LudoGame.csproj", "{30284247-14E8-4358-825B-7E9876BEFE83}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "thirdLogicExercise", "thirdLogicExercise\thirdLogicExercise.csproj", "{4793ED9B-2FB9-4554-A3BB-9BE88ADDEC89}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -172,5 +174,9 @@ Global
 		{30284247-14E8-4358-825B-7E9876BEFE83}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{30284247-14E8-4358-825B-7E9876BEFE83}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{30284247-14E8-4358-825B-7E9876BEFE83}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4793ED9B-2FB9-4554-A3BB-9BE88ADDEC89}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4793ED9B-2FB9-4554-A3BB-9BE88ADDEC89}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4793ED9B-2FB9-4554-A3BB-9BE88ADDEC89}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4793ED9B-2FB9-4554-A3BB-9BE88ADDEC89}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

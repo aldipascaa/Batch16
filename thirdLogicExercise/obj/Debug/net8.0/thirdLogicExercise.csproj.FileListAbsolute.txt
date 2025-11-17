@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\bin\Debug\net8.0\thirdLogicExercise.exe
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\bin\Debug\net8.0\thirdLogicExercise.deps.json
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\bin\Debug\net8.0\thirdLogicExercise.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\bin\Debug\net8.0\thirdLogicExercise.dll
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\bin\Debug\net8.0\thirdLogicExercise.pdb
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.dll
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\refint\thirdLogicExercise.dll
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.pdb
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\thirdLogicExercise.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\thirdLogicExercise\obj\Debug\net8.0\ref\thirdLogicExercise.dll
