@@ -14,6 +14,7 @@ class Program
         //Console.WriteLine();
         ThirdLogic(x);
     }
+    // First Logic Implementation using if-else statements
     static void FirstLogic(int x)
     {
         for (int i = 1; i <= x;i++)
@@ -34,6 +35,7 @@ class Program
             }
         }
     }
+    // Refactored SecondLogic using boolean variables
     static void SecondLogic(int x)
     {
         for (int i = 1; i <= x; i++)
@@ -46,6 +48,7 @@ class Program
                 Console.Write(logic1 || logic2 || logic3?",": $"{i},");
         }
     }
+    // Refactored ThirdLogic using Dictionary
     static void ThirdLogic(int x)
     {
         // Using Dictionary to store the key value pairs
