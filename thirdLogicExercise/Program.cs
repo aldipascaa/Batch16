@@ -14,7 +14,6 @@ class Program
         //Console.WriteLine();
         ThirdLogic(x);
     }
-
     static void FirstLogic(int x)
     {
         for (int i = 1; i <= x;i++)
@@ -35,7 +34,6 @@ class Program
             }
         }
     }
-
     static void SecondLogic(int x)
     {
         for (int i = 1; i <= x; i++)
@@ -48,19 +46,20 @@ class Program
                 Console.Write(logic1 || logic2 || logic3?",": $"{i},");
         }
     }
-
     static void ThirdLogic(int x)
     {
+        // Using Dictionary to store the key value pairs
+        var dictionary = new Dictionary<int, string>()
+        {
+            {3, "foo"},
+            {4, "baz"},
+            {5, "bar"},
+            {7, "jazz"},
+            {9, "huzz"}
+        };
+        // Loop through numbers from 1 to x
         for (int i = 1; i <= x; i++)
         {
-            var dictionary = new Dictionary<int, string>()
-            {
-                {3, "foo"},
-                {4, "baz"},
-                {5, "bar"},
-                {7, "jazz"},
-                {9, "huzz"}
-            };
             string output = "";
             foreach (var (key,value) in dictionary) output += i % key == 0 ? value : "";
             if (i != x) output += output != "" ? "," : $"{i},";
