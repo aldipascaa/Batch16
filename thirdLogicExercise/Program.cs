@@ -62,8 +62,7 @@ class Program
                 {9, "huzz"}
             };
             string output = "";
-            foreach (var (key,value) in dictionary)
-                output += i % key == 0 ? value : "";
+            foreach (var (key,value) in dictionary) output += i % key == 0 ? value : "";
             if (i != x) output += output != "" ? "," : $"{i},";
             Console.Write(output);
         }
