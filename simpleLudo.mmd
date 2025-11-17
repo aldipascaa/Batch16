@@ -1,0 +1,56 @@
+classDiagram
+    Game --> Player
+    Game --> Dice
+    Game --> Board
+    Player --> Pawn
+
+    class Game {
+        +List<Player> Players
+        +Dice dice
+        +Board board
+        +GameState State
+        +int currentPlayerIndex
+        +void Start()
+        -void PlayTurn()
+        -Pawn ChoosePawn(Player player, int roll)
+        -void MovePawn(Pawn pawn, int steps)
+    }
+
+    class Player {
+        +string Name
+        +List<Pawn> Pawns
+        +bool AllPawnsComplete()
+    }
+
+    class Pawn {
+        +string Owner
+        +int Id
+        +int Position
+        +PawnState State
+        +string Symbol
+        +bool IsComplete
+    }
+
+    class Dice {
+        +int Roll()
+    }
+
+    class Board {
+        +const int TrackLength
+        +void Display(List<Player> players)
+    }
+
+    %% ENUMS
+    class PawnState {
+        <<Enumeration>>
+        Home
+        Active
+        Complete
+    }
+
+    class GameState {
+        <<Enumeration>>
+        NotStarted
+        Running
+        Finished
+    }

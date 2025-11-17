@@ -1,0 +1,131 @@
+classDiagram
+    %% RELATIONSHIPS
+    GameController --> Game
+    GameController ..|> IGameEvent
+    Game --> Board
+    Game --> Player
+    Game --> Dice
+    Board --> Tile
+    Board --> Pawn
+    Board ..> Player
+    Player --> Pawn
+    Player ..> PlayerState
+    Pawn --> Tile
+    Game ..> GameState
+    Pawn ..> PawnState
+    Tile ..> TileType
+    class GameEvent{
+        +event Action~Game~ GameStarted
+        +event Action~Player,int~ DiceRolled
+        +event Action~Player,Pawn,int,int~ PawnMoved
+        +event Action~Player~ PlayerChanged
+        +event Action~Player~ PlayerWon
+    }
+
+    %% GAME CONTROLLER
+    class GameController{
+        +Game CurrentGame
+        +void StartGame()
+        +void RestartGame()
+        +void OnDiceRolled()
+        +void OnPawnMoved()
+        +void OnPlayerChanged()
+        +void OnPlayerWon()
+        %% Events implemented from IGameEvent
+        +event Action~Game~ GameStarted
+        +event Action~Player,int~ DiceRolled
+        +event Action~Player,Pawn,int,int~ PawnMoved
+        +event Action~Player~ PlayerChanged
+        +event Action~Player~ PlayerWon
+    }
+
+    %% GAME
+    class Game{
+        +GameState State
+        +List~Player~ Players
+        +Board Board
+        +Dice Dice
+        +Player CurrentPlayer
+        +int CurrentPlayerIndex
+        +int CurrentDiceValue
+
+        +Game(List~Player~ players)
+        +void Start()
+        +void Reset()
+        +void End()
+        +int RollDice()
+        +void MovePawn(Pawn pawn, int steps)
+        +void NextTurn()
+        +bool CheckWin(Player player)
+        +Player GetCurrentPlayer()
+    }
+
+    %% BOARD
+    class Board{
+        +List~Tile~ MainTrack
+        +void PlacePawn(Pawn pawn, Tile tile)
+        +void RemovePawn(Pawn pawn)
+        +void Reset()
+    }
+
+    %% DICE
+    class Dice{
+        +Random random
+        +int RollDice()
+        +event Action~int~ DiceRolled
+    }
+
+    %% PLAYER
+    class Player{
+        +String Color
+        +List~Pawn~ Pawns
+    }
+
+    %% PAWN
+    class Pawn{
+        +int Position
+        +PawnState State
+        +int StepsMoved
+        +int TrackLength
+        +int GoalLength
+        +bool IsHome()
+        +bool IsActive()
+        +bool IsComplete()
+    }
+
+    %% TILE
+    class Tile{
+        +bool IsSafeZone
+        +bool IsOccupied
+        +List~Pawn~ GetOccupied()
+    }
+
+    %% ENUMS
+    class GameState{
+        <<enumeration>>
+        NotStarted
+        Running
+        Finished
+    }
+
+    class PlayerState{
+        <<enumeration>>
+        Active
+        Won
+    }
+
+    class PawnState{
+        <<enumeration>>
+        Home
+        Active
+        Complete
+    }
+
+    class TileType{
+        <<enumeration>>
+        Normal
+        Safe
+        Start
+        HomeEntry
+        Home
+    }

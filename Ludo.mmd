@@ -1,41 +1,36 @@
 classDiagram
-    GameController-->Game
-    GameController..|> IGameEvent
-    Game--Board
-    Game--Players
-    Game--Dice
-    Board-->Tiles
-    Board-->Pawns
-    Board..>Players
-    Players<-->Pawns
-    Players..>PlayerState
-    Pawns-->Tiles
-    Game..>GameState
-    Pawns..>PawnState
-    Tiles..>TilesType
+    %%Class Relationship Architecture
+    GameController"1"-->"1"Game : controls
 
-    class IGameEvent{
-        <<interface>>
-        +event Action<.Game> GameStarted
-        +event Action<.Player, int> DiceRolled
-        +event Action<.Player, Piece, int, int> PawnMoved
-        +event Action<.Player> PlayerChanged
-        +event Action<.Player> PlayerWon
-    }
+    Game"1"-->"1"Board : uses
+    Game"1"-->"4"IPlayer : players
+    Game"1"-->"1"Dice : uses
+
+    Board"1"-->"52"Tile : mainTrack
+    Board"1"-->"*..*"Pawn : active pawns
+    IPlayer"1"-->"n"Pawn : owns
+    Pawn"1"-->"1" Tile :currentTile
+
+    %%Enumeration Class Relation
+    Game..>GameState
+    IPlayer..>PlayerState
+    Pawn..>PawnState
+    Tile..>TileType
+
+    %%Interface
+    Game-->IRuleEngine : rules
+    GameController..|> IGameEvent
+
     class GameController{
         +Game CurrentGame
+        +event ...
+
         +void StartGame()
         +Void RestartGame()
         +void OnDiceRolled()
         +void OnPawnMoved()
         +void OnPlayerChanged()
         +void OnPlayerWon()
-        %%event
-        +event Action<.Game> GameStarted
-        +event Action<.Player, int> DiceRolled
-        +event Action<.Player, Piece, int, int> PawnMoved
-        +event Action<.Player> PlayerChanged
-        +event Action<.Player> PlayerWon
     }
     class Game{
         +GameState State
@@ -44,49 +39,60 @@ classDiagram
         +Dice Dice
         +Player CurrentPlayer
         +int CurrentPlayerIndex
-        +int CurrentDiceValue
 
-        +LudoGame(list<Player> Players)
+        +IRuleEngine RuleEngine
+
         +void Start()
         +void Reset()
         +void End()
         +int RollDice()
-        +void MovePawn(Pawn pawn, int steps)
         +void NextTurn()
-        +bool CheckWin(Player player)
         +Player GetCurrentPlayer()
     }
     class Board{
         +List<Tiles> MainTrack
-        +void PlacePawn()
-        +void RemovePawn()
+        +Dictionary<.Player, List<Tile>> HomeStretch
+        +Dictionary<.Player, Tile> StartTiles
+        +Dictionary<.Player, Tile> HomeTile
+
+        +void PlacePawn(Pawn pawn, Tile Tile)
+        +void RemovePawn(Pawn pawn)
+        +Tile GetTile(Pawn pawn)
+        +Tile MovePawn(Pawn Pawn, int Steps)
         +void Reset()
     }
     class Dice{
-        +random
-        +rollDice()
-        +event Action
+        +int rollDice()
     }
-    class Players{
+    class IPlayer{
+        <<Interface>>
         +String Color
         +List<Pawn> Pawns
+        +PlayerState State
+
+        +bool AllPawnsFinished()
+        +pawn GetActivePawn(int roll)
     }
-    class Pawns{
+    class Pawn{
         +int Position
         +PawnState State
         +int StepsMoved
         +int TrackLength
         +int GoalLength
+
         +bool IsHome()
         +bool IsActive()
         +bool IsComplete()
 
     }
-    class Tiles{
-        +bool isSafeZone
-        +bool isOccupied
-        +getOccupied()
+    class Tile{
+        +TileType Type
+        +Pawn OccupiedBy
+
+        +bool isSafeZone()
+        +bool isOccupied()
     }
+
     %%ENUMS
     class GameState{
         <<Enumeration>>
@@ -104,4 +110,32 @@ classDiagram
         Home
         Active
         Complete
+    }
+
+    class TileType{
+        <<enumeration>>
+        Normal
+        Safe
+        Start
+        HomeEntry
+        Home
+    }
+
+
+    class IGameEvent{
+        <<interface>>
+        +event Action<.Game> GameStarted
+        +event Action<.Game> GameRestart
+        +event Action<.Player, int> DiceRolled
+        +event Action<.Player, Piece, Tile, Tile> PawnMoved
+        +event Action<.Player> PlayerChanged
+        +event Action<.Player> PlayerWon
+    }
+
+    class IRuleEngine{
+        <<interface>>
+        +bool CanMove(Pawn pawn, int roll)
+        +Tile GetDestination(Pawn pawn, int roll)
+        +bool IsCapture(Tile destination)
+        +bool HasPlayerWon(Player player)
     }
