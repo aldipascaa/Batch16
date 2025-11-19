@@ -1,199 +1,135 @@
-﻿using System;
-using System.Collections.Generic;
-
-enum PawnState { Home, Active, Complete }
-enum GameState { NotStarted, Running, Finished }
-
-class Dice
+﻿public class Board
 {
-    private Random random = new Random();
-    public int Roll() => random.Next(1, 7);
-}
+    private readonly int size;
+    private char[,] grid;  // Removed readonly to allow changes
 
-class Pawn
-{
-    public string Owner { get; private set; }
-    public int Position { get; set; } = 0;
-    public int Id { get; private set; }
-    public PawnState State { get; set; } = PawnState.Home;
-
-    public Pawn(string owner, int id)
+    public Board(int size = 15)
     {
-        Owner = owner;
-        Id = id;
+        this.size = size;
+        grid = new char[size, size];
+        ClearBoard();
     }
 
-    public string Symbol => $"{Owner[0]}{Id}";
-    public bool IsComplete => State == PawnState.Complete;
-}
+    // ========== PUBLIC METHODS TO MODIFY BOARD ==========
 
-class Player
-{
-    public string Name { get; private set; }
-    public List<Pawn> Pawns { get; private set; }
-
-    public Player(string name, int pawnCount = 2)
+    public void SetCell(int row, int col, char value)
     {
-        Name = name;
-        Pawns = new List<Pawn>();
-        for (int i = 0; i < pawnCount; i++)
+        if (IsValidPosition(row, col))
+            grid[row, col] = value;
+    }
+
+    public char GetCell(int row, int col)
+    {
+        return IsValidPosition(row, col) ? grid[row, col] : '?';
+    }
+
+    public void ClearBoard()
+    {
+        for (int r = 0; r < size; r++)
+            for (int c = 0; c < size; c++)
+                grid[r, c] = '_';
+    }
+
+    public void FillArea(int startRow, int startCol, int width, int height, char fillChar)
+    {
+        for (int r = startRow; r < startRow + height && r < size; r++)
         {
-            Pawns.Add(new Pawn(name, i + 1));
-        }
-    }
-
-    public bool AllPawnsComplete()
-    {
-        foreach (var pawn in Pawns)
-            if (!pawn.IsComplete) return false;
-        return true;
-    }
-}
-
-class Board
-{
-    public const int TrackLength = 20;
-
-    public void Display(List<Player> players)
-    {
-        string[] track = new string[TrackLength];
-        for (int i = 0; i < TrackLength; i++)
-            track[i] = "__"; // empty square
-
-        foreach (var player in players)
-        {
-            foreach (var pawn in player.Pawns)
+            for (int c = startCol; c < startCol + width && c < size; c++)
             {
-                if (pawn.State == PawnState.Active)
-                {
-                    int pos = Math.Min(pawn.Position - 1, TrackLength - 1);
-                    track[pos] = pawn.Symbol;
-                }
-            }
-        }
-
-        Console.WriteLine("Board:");
-        for (int i = 0; i < TrackLength; i++)
-        {
-            Console.Write(track[i] + " ");
-        }
-        Console.WriteLine("\n");
-    }
-}
-
-class Game
-{
-    public List<Player> Players { get; private set; }
-    private Dice dice = new Dice();
-    private int currentPlayerIndex = 0;
-    public GameState State { get; private set; } = GameState.NotStarted;
-    private Board board = new Board();
-
-    public Game(List<Player> players)
-    {
-        Players = players;
-    }
-
-    public void Start()
-    {
-        State = GameState.Running;
-        Console.WriteLine("Game Started!");
-        board.Display(Players);
-
-        while (State == GameState.Running)
-        {
-            PlayTurn();
-        }
-    }
-
-    private void PlayTurn()
-    {
-        Player current = Players[currentPlayerIndex];
-        Console.WriteLine($"\n{current.Name}'s turn. Press Enter to roll dice...");
-        Console.ReadLine();
-
-        int roll = dice.Roll();
-        Console.WriteLine($"{current.Name} rolled a {roll}!");
-
-        Pawn pawnToMove = ChoosePawn(current, roll);
-        if (pawnToMove != null)
-        {
-            MovePawn(pawnToMove, roll);
-            board.Display(Players);
-        }
-        else
-        {
-            Console.WriteLine("No pawn can move this turn.");
-        }
-
-        if (current.AllPawnsComplete())
-        {
-            Console.WriteLine($"{current.Name} has moved all pawns to the goal! They win!");
-            State = GameState.Finished;
-            return;
-        }
-
-        currentPlayerIndex = (currentPlayerIndex + 1) % Players.Count;
-    }
-
-    private Pawn ChoosePawn(Player player, int roll)
-    {
-        // Prioritize active pawns
-        foreach (var pawn in player.Pawns)
-        {
-            if (pawn.State == PawnState.Active)
-                return pawn;
-        }
-
-        // If rolled 6, try to move a pawn out of home
-        if (roll == 6)
-        {
-            foreach (var pawn in player.Pawns)
-            {
-                if (pawn.State == PawnState.Home)
-                    return pawn;
-            }
-        }
-
-        return null; // No pawn can move
-    }
-
-    private void MovePawn(Pawn pawn, int steps)
-    {
-        if (pawn.State == PawnState.Home && steps == 6)
-        {
-            pawn.State = PawnState.Active;
-            pawn.Position = 1;
-            Console.WriteLine($"{pawn.Owner}'s pawn {pawn.Id} moves out of home!");
-        }
-        else if (pawn.State == PawnState.Active)
-        {
-            pawn.Position += steps;
-            if (pawn.Position >= Board.TrackLength)
-            {
-                pawn.Position = Board.TrackLength;
-                pawn.State = PawnState.Complete;
-                Console.WriteLine($"{pawn.Owner}'s pawn {pawn.Id} reached the goal!");
+                grid[r, c] = fillChar;
             }
         }
     }
 
-    class Program
-{
-    static void Main(string[] args)
+    public void DrawLine(int startRow, int startCol, int endRow, int endCol, char lineChar)
     {
-        Console.WriteLine("Welcome to Console Ludo!");
-        List<Player> players = new List<Player>
+        int rowStep = Math.Sign(endRow - startRow);
+        int colStep = Math.Sign(endCol - startCol);
+        
+        for (int r = startRow, c = startCol; 
+             r != endRow + rowStep || c != endCol + colStep; 
+             r += rowStep, c += colStep)
         {
-            new Player("Red"),
-            new Player("Blue")
-        };
+            if (IsValidPosition(r, c))
+                grid[r, c] = lineChar;
+        }
+    }
 
-        Game game = new Game(players);
-        game.Start();
+    public void PlacePlayerHome(int row, int col, char playerSymbol)
+    {
+        // Place a 3x3 home area
+        for (int r = row - 1; r <= row + 1; r++)
+        {
+            for (int c = col - 1; c <= col + 1; c++)
+            {
+                if (IsValidPosition(r, c))
+                    grid[r, c] = playerSymbol;
+            }
+        }
+    }
 
-        Console.WriteLine("Game Over!");
+    private bool IsValidPosition(int row, int col)
+    {
+        return row >= 0 && row < size && col >= 0 && col < size;
+    }
+
+    // Your existing Print method remains the same
+    public void Print()
+    {
+        for (int r = 0; r < size; r++)
+        {
+            Console.WriteLine();
+            for (int c = 0; c < size; c++)
+            {
+                if ((c == 0 && r == 7)||(c == size - 1 && r == 7)||(r == 0 && c == 7)||(r == size - 1 && c == 7))
+                    Console.Write("[ "+grid[r, c] + " ]");
+                else if ((c > 5 && c <9 ) && (r > 5 && r <9))
+                    Console.Write("  "+grid[r, c] + "  ");
+                else if ((c ==7 && r > 0 && r < size -1)||(r == 7 && c > 0 && c < size -1))
+                    Console.Write("(("+grid[r, c] + "))");
+                else if ((c == 6 || c == size - 7 || r == 6 || r == size -7))
+                    Console.Write("[ "+grid[r, c] + " ]");
+                else
+                    Console.Write("  "+grid[r, c] + "  ");
+            }
+            Console.WriteLine();
+        }
     }
 }
 
+class Program
+{
+    static void Main()
+    {
+        Board board = new Board();
+        
+        // Example 1: Create a custom board layout
+        board.ClearBoard();
+        
+        // Draw paths
+        board.DrawLine(0, 7, 14, 7, '═'); // Vertical path
+        board.DrawLine(7, 0, 7, 14, '║'); // Horizontal path
+        
+        // Place player homes
+        board.PlacePlayerHome(3, 3, 'R');    // Red home
+        board.PlacePlayerHome(1, 13, 'B');   // Blue home  
+        board.PlacePlayerHome(13, 1, 'G');   // Green home
+        board.PlacePlayerHome(13, 13, 'Y');  // Yellow home
+        
+        // Add safe zones
+        board.FillArea(6, 6, 3, 3, '★');
+        
+        board.Print();
+
+        // Example 2: Dynamic changes during gameplay
+        Console.WriteLine("\n=== MOVING A PLAYER ===");
+        board.SetCell(7, 1, 'R');  // Place red player at position
+        board.Print();
+        
+        Console.WriteLine("\n=== MOVING TO NEW POSITION ===");
+        board.SetCell(7, 1, '_');  // Clear old position
+        board.SetCell(7, 2, 'R');  // Set new position
+        board.SetCell(6, 7, 'B');  // Place blue player at position
+        board.Print();
+    }
 }

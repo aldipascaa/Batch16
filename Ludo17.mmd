@@ -1,0 +1,283 @@
+classDiagram
+    %% Core Game Relationships
+    Game"1" *-- "1" IGameStateManager : manages state
+    Game"1" *-- "1" IRuleEngine : enforces rules
+    Game"1" *-- "1" IBoard : uses
+    Game"1" *-- "1" ITurnManager : manages turns
+    Game"1" *-- "1" IMovementManager : manages movement
+    Game"1" o-- "2..4" IPlayer : manages
+    Game"1" o-- "n" Pawn : controls
+    Game"1" *-- "1" IDice : uses
+
+    %% Player-Pawn Relationship
+    IPlayer"1" *-- "4" Pawn : has
+
+    %% Board Composition
+    IBoard"1" o-- "*" ITile : contains
+    IBoard"1" o-- "*" Coordinates : positions
+    ITile"1" *-- "1" Coordinates : position
+    Pawn"1" *-- "1" Coordinates : position
+
+    %% Rule Engine Dependencies
+    IRuleEngine --> IMovementRule : uses
+    IRuleEngine --> ICaptureRule : uses
+    IRuleEngine --> IWinConditionRule : uses
+
+    %% Event System
+    Game --> IGameEventPublisher : publishes
+    IGameEventSubscriber <|.. GameEventAggregator : implements
+
+    %% Enumeration Dependencies
+    Game ..> GameState
+    IPlayer ..> PlayerState
+    IPlayer ..> Color
+    Pawn ..> PawnState
+    Pawn ..> Color
+    ITile ..> Color
+    ITile ..> TileType
+
+    %% INTERFACES (Dependency Inversion)
+    class IGameStateManager {
+        <<Interface>>
+        +GameState CurrentState
+        +void TransitionTo(GameState newState)
+        +bool CanTransitionTo(GameState newState)
+    }
+
+    class ITurnManager {
+        <<Interface>>
+        +IPlayer CurrentPlayer
+        +void NextTurn()
+        +bool IsExtraTurn(int roll, Pawn movedPawn)
+    }
+
+    class IMovementManager {
+        <<Interface>>
+        +MoveResult MovePawn(Pawn pawn, int steps)
+        +bool CanMovePawn(Pawn pawn, int steps)
+        +Tile CalculateDestination(Pawn pawn, int steps)
+    }
+
+    class IDice {
+        <<Interface>>
+        +int Sides
+        +int Roll()
+    }
+
+    class IBoard {
+        <<Interface>>
+        +ITile GetTile(Coordinates position)
+        +ITile GetStartTile(Color color)
+        +ITile GetHomeTile(Color color)
+        +IPlayerPath GetPlayerPath(Color color)
+        +bool IsValidPosition(Coordinates position)
+    }
+
+    class IPlayer {
+        <<Interface>>
+        +Color Color
+        +PlayerState State
+        +IReadOnlyList~Pawn~ Pawns
+        +bool HasWon()
+        +IEnumerable~Pawn~ GetMovablePawns(int roll)
+    }
+
+    class IRuleEngine {
+        <<Interface>>
+        +bool ValidateMove(Pawn pawn, int roll)
+        +bool ValidateCapture(Pawn movingPawn, Tile destination)
+        +bool CheckWinCondition(IPlayer player)
+        +bool CanStartPawn(Pawn pawn, int roll)
+    }
+
+    class IPlayerPath {
+        <<Interface>>
+        +Color Color
+        +ITile StartTile
+        +ITile HomeTile
+        +ITile[] MainTrack
+        +ITile[] HomePath
+        +int GetDistanceFromStart(Pawn pawn)
+    }
+
+    class ITile {
+        <<Interface>>
+        +Coordinates Position
+        +TileType Type
+        +Color? Color
+        +IReadOnlyList~Pawn~ Occupants
+        +bool IsSafe
+        +bool CanOccupy(Pawn pawn)
+        +void AddPawn(Pawn pawn)
+        +void RemovePawn(Pawn pawn)
+    }
+
+    class IGameEventPublisher {
+        <<Interface>>
+        +event Action~IPlayer~ PlayerWon
+        +event Action~Pawn, ITile, ITile~ PawnMoved
+        +event Action~Pawn, Pawn~ PawnCaptured
+        +event Action~GameState, GameState~ StateChanged
+    }
+
+    %% RULE INTERFACES (Open/Closed Principle)
+    class IMovementRule {
+        <<Interface>>
+        +bool IsValidMove(Pawn pawn, int roll, IBoard board)
+    }
+
+    class ICaptureRule {
+        <<Interface>>
+        +bool CanCapture(Pawn attacker, Pawn defender, ITile tile)
+    }
+
+    class IWinConditionRule {
+        <<Interface>>
+        +bool HasPlayerWon(IPlayer player)
+    }
+
+    %% CONCRETE CLASSES
+    class Game {
+        -IGameStateManager _stateManager
+        -ITurnManager _turnManager
+        -IMovementManager _movementManager
+        -IRuleEngine _ruleEngine
+        -IBoard _board
+        -IDice _dice
+        -IList~IPlayer~ _players
+        -IGameEventPublisher _eventPublisher
+
+        +void Start()
+        +void Reset()
+        +MoveResult ProcessTurn(IPlayer player, Pawn pawn, int roll)
+        +IEnumerable~Pawn~ GetValidMoves(IPlayer player, int roll)
+    }
+
+    class StandardDice {
+        -Random _random
+        +int Sides
+        +int Roll()
+    }
+
+    class Pawn {
+        -int _id
+        -Color _color
+        -Coordinates _position
+        -PawnState _state
+        -ITile _currentTile
+
+        +int Id
+        +Color Color
+        +Coordinates Position
+        +PawnState State
+        +ITile CurrentTile
+
+        +void MoveTo(ITile tile)
+        +void ReturnToStart()
+        +void Finish()
+    }
+
+    class Tile {
+        -Coordinates _position
+        -TileType _type
+        -Color? _color
+        -IList~Pawn~ _occupants
+
+        +Coordinates Position
+        +TileType Type
+        +Color? Color
+        +IReadOnlyList~Pawn~ Occupants
+        +bool IsSafe
+        +bool CanOccupy(Pawn pawn)
+        +void AddPawn(Pawn pawn)
+        +void RemovePawn(Pawn pawn)
+    }
+
+    class Player {
+        -Color _color
+        -PlayerState _state
+        -IList~Pawn~ _pawns
+        -IRuleEngine _ruleEngine
+
+        +Color Color
+        +PlayerState State
+        +IReadOnlyList~Pawn~ Pawns
+        +bool HasWon()
+        +IEnumerable~Pawn~ GetMovablePawns(int roll)
+        +int GetFinishedPawnCount()
+    }
+
+    class CompositeRuleEngine {
+        -IEnumerable~IMovementRule~ _movementRules
+        -IEnumerable~ICaptureRule~ _captureRules
+        -IEnumerable~IWinConditionRule~ _winConditionRules
+
+        +bool ValidateMove(Pawn pawn, int roll)
+        +bool ValidateCapture(Pawn movingPawn, Tile destination)
+        +bool CheckWinCondition(IPlayer player)
+        +void AddMovementRule(IMovementRule rule)
+        +void AddCaptureRule(ICaptureRule rule)
+    }
+
+    %% ENUMS
+    class GameState {
+        <<Enumeration>>
+        NotStarted
+        Running
+        Paused
+        Finished
+    }
+
+    class Color {
+        <<enumeration>>
+        Red
+        Blue
+        Green
+        Yellow
+    }
+
+    class PlayerState {
+        <<Enumeration>>
+        Active
+        Won
+        Eliminated
+    }
+
+    class PawnState {
+        <<Enumeration>>
+        InStart
+        OnBoard
+        InHome
+        Finished
+    }
+
+    class TileType {
+        <<enumeration>>
+        Start
+        Normal
+        Safe
+        HomeEntry
+        Home
+    }
+
+    class Coordinates {
+        <<struct>>
+        -int _x
+        -int _y
+        +int X
+        +int Y
+        +Coordinates(int x, int y)
+        +bool Equals(Coordinates other)
+        +int GetHashCode()
+    }
+
+    class MoveResult {
+        <<record>>
+        +bool Success
+        +string Message
+        +Pawn MovedPawn
+        +ITile FromTile
+        +ITile ToTile
+        +Pawn CapturedPawn
+        +bool ExtraTurn
+    }

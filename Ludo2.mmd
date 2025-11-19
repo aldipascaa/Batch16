@@ -1,131 +1,160 @@
 classDiagram
-    %% RELATIONSHIPS
-    GameController --> Game
-    GameController ..|> IGameEvent
-    Game --> Board
-    Game --> Player
-    Game --> Dice
-    Board --> Tile
-    Board --> Pawn
-    Board ..> Player
-    Player --> Pawn
-    Player ..> PlayerState
-    Pawn --> Tile
-    Game ..> GameState
-    Pawn ..> PawnState
-    Tile ..> TileType
-    class GameEvent{
-        +event Action~Game~ GameStarted
-        +event Action~Player,int~ DiceRolled
-        +event Action~Player,Pawn,int,int~ PawnMoved
-        +event Action~Player~ PlayerChanged
-        +event Action~Player~ PlayerWon
-    }
 
-    %% GAME CONTROLLER
-    class GameController{
-        +Game CurrentGame
-        +void StartGame()
-        +void RestartGame()
-        +void OnDiceRolled()
-        +void OnPawnMoved()
-        +void OnPlayerChanged()
-        +void OnPlayerWon()
-        %% Events implemented from IGameEvent
-        +event Action~Game~ GameStarted
-        +event Action~Player,int~ DiceRolled
-        +event Action~Player,Pawn,int,int~ PawnMoved
-        +event Action~Player~ PlayerChanged
-        +event Action~Player~ PlayerWon
-    }
+%% ===============================
+%%            RELATIONSHIPS
+%% ===============================
 
-    %% GAME
-    class Game{
-        +GameState State
-        +List~Player~ Players
-        +Board Board
-        +Dice Dice
-        +Player CurrentPlayer
-        +int CurrentPlayerIndex
-        +int CurrentDiceValue
+Game "1" --> "1" Board : uses
+Game "1" --> "1" Dice : uses
+Game "1" --> "n" Player : manages
+Game "1" --> "1" IRuleEngine : rules
 
-        +Game(List~Player~ players)
-        +void Start()
-        +void Reset()
-        +void End()
-        +int RollDice()
-        +void MovePawn(Pawn pawn, int steps)
-        +void NextTurn()
-        +bool CheckWin(Player player)
-        +Player GetCurrentPlayer()
-    }
+Player "1" --> "n" Pawn : owns
+Player "1" --> "1" PlayerPath : receives from Board
 
-    %% BOARD
-    class Board{
-        +List~Tile~ MainTrack
-        +void PlacePawn(Pawn pawn, Tile tile)
-        +void RemovePawn(Pawn pawn)
-        +void Reset()
-    }
+Board "1" --> "52" Tile : MainTrack
+Board "1" --> "n" Tile : StartTiles
+Board "1" --> "n" Tile : HomeTiles
+Board "1" --> "n" Tile : HomeEntryTiles
+Board "1" --> "n" List~Tile~ : HomeStretches
+Board "1" --> "n" PlayerPath : Paths (authority)
 
-    %% DICE
-    class Dice{
-        +Random random
-        +int RollDice()
-        +event Action~int~ DiceRolled
-    }
+PlayerPath "1" --> "n" Tile : OrderedTiles
 
-    %% PLAYER
-    class Player{
-        +String Color
-        +List~Pawn~ Pawns
-    }
+Pawn "1" --> "1" Tile : CurrentTile
 
-    %% PAWN
-    class Pawn{
-        +int Position
-        +PawnState State
-        +int StepsMoved
-        +int TrackLength
-        +int GoalLength
-        +bool IsHome()
-        +bool IsActive()
-        +bool IsComplete()
-    }
+Player ..> Color
+Player ..> PlayerState
+Pawn ..> PawnState
+Pawn ..> Color
+Tile ..> TileType
+Game ..> GameState
 
-    %% TILE
-    class Tile{
-        +bool IsSafeZone
-        +bool IsOccupied
-        +List~Pawn~ GetOccupied()
-    }
+%% ===============================
+%%              CLASSES
+%% ===============================
 
-    %% ENUMS
-    class GameState{
-        <<enumeration>>
-        NotStarted
-        Running
-        Finished
-    }
+class Game {
+    +GameState State
+    +List<Player> Players
+    +Board Board
+    +Dice Dice
+    +Player CurrentPlayer
+    +int CurrentPlayerIndex
+    +IRuleEngine RuleEngine
 
-    class PlayerState{
-        <<enumeration>>
-        Active
-        Won
-    }
+    +void Start()
+    +void Reset()
+    +void End()
+    +void NextTurn()
+    +int RollDice()
+    +Tile MovePawn(Pawn pawn, int steps)
+    +void PlacePawn(Pawn pawn, Tile tile)
+    +void RemovePawn(Pawn pawn)
+    +Player GetCurrentPlayer()
+}
 
-    class PawnState{
-        <<enumeration>>
-        Home
-        Active
-        Complete
-    }
+class Player {
+    +Color Color
+    +List<Pawn> Pawns
+    +PlayerState State
+    +PlayerPath Path   // Provided by Board
 
-    class TileType{
-        <<enumeration>>
-        Normal
-        Safe
-        Start
-        HomeEntry
-        Home
-    }
+    +bool AllPawnsFinished()
+    +List<Pawn> GetMovablePawns(int roll)
+}
+
+class Board {
+    +List<Tile> MainTrack
+    +Dictionary<Color, Tile> StartTiles
+    +Dictionary<Color, Tile> HomeTiles
+    +Dictionary<Color, Tile> HomeEntryTiles
+    +Dictionary<Color, List<Tile>> HomeStretches
+    +Dictionary<Color, PlayerPath> Paths
+
+    +void BuildAllPlayerPaths(List<Player> players)
+    +PlayerPath BuildPath(Color color)
+    +PlayerPath GetPath(Color color)
+}
+
+class PlayerPath {
+    +Color Color
+    +List<Tile> OrderedTiles
+    +int StartIndex
+
+    +Tile GetTileAt(int index)
+    +int Length()
+}
+
+class Pawn {
+    +int ID
+    +Color Color
+    +PawnState State
+    +Tile CurrentTile
+
+    +bool IsHome()
+    +bool IsActive()
+    +bool IsComplete()
+}
+
+class Tile {
+    +TileType Type
+    +Pawn OccupiedBy
+
+    +bool isOccupied()
+    +bool isSafeZone()
+}
+
+class Dice {
+    +int Sides
+    +int Roll()
+}
+
+class IRuleEngine {
+    <<interface>>
+    +bool CanMove(Pawn pawn, int roll)
+    +Tile GetDestination(Pawn pawn, int roll)
+    +bool IsCapture(Tile tile)
+    +bool HasPlayerWon(Player player)
+}
+
+%% ===============================
+%%              ENUMS
+%% ===============================
+
+class GameState {
+    <<Enumeration>>
+    NotStarted
+    Running
+    Finished
+}
+
+class Color {
+    <<Enumeration>>
+    Red
+    Blue
+    Green
+    Yellow
+}
+
+class PlayerState {
+    <<Enumeration>>
+    Active
+    Won
+}
+
+class PawnState {
+    <<Enumeration>>
+    Home
+    Active
+    Complete
+}
+
+class TileType {
+    <<Enumeration>>
+    Start
+    Normal
+    Safe
+    HomeEntry
+    Home
+}

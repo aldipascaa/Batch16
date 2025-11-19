@@ -1,96 +1,116 @@
 classDiagram
     %%Class Relationship Architecture
-    GameController"1"-->"1"Game : controls
+    Game"1"*--"1"Board : uses
+    Game"1"o--"2..4"IPlayer : manages
+    Game"1"o--"n"Pawn : controls
+    Game"1"*--"1"Dice : uses
 
-    Game"1"-->"1"Board : uses
-    Game"1"-->"4"IPlayer : players
-    Game"1"-->"1"Dice : uses
+    IPlayer"1"*--"4"Pawn : has
+    Player-->IPlayer : implements
 
-    Board"1"-->"52"Tile : mainTrack
-    Board"1"-->"*..*"Pawn : active pawns
-    IPlayer"1"-->"n"Pawn : owns
-    Pawn"1"-->"1" Tile :currentTile
+    Board"1"o--"*"Tile : mainTrack
+    Board"1"o--"*"Coordinates : positions
+    Tile"1"-->"1"Coordinates : position
+    Pawn"1"-->"1"Coordinates : position
 
     %%Enumeration Class Relation
     Game..>GameState
     IPlayer..>PlayerState
+    IPlayer..>Color
     Pawn..>PawnState
+    Pawn..>Color
+    Tile..>Color
     Tile..>TileType
 
-    %%Interface
-    Game-->IRuleEngine : rules
-    GameController..|> IGameEvent
-
-    class GameController{
-        +Game CurrentGame
-        +event ...
-
-        +void StartGame()
-        +Void RestartGame()
-        +void OnDiceRolled()
-        +void OnPawnMoved()
-        +void OnPlayerChanged()
-        +void OnPlayerWon()
-    }
+    %%CLASSES
     class Game{
+        -_CurrentPlayerIndex : int
+        -Dictionary<.Pawn, Tile> _pawnPositions
+        +Dictionary<.Color, Tile[]> PlayerPaths
+        +GetPlayerPath(Color color) : Tile[] PlayerPath
+
         +GameState State
-        +List<Player> Players
+        +List<.Player> Players
         +Board Board
         +Dice Dice
+        +IruleEngine RuleEngine
         +Player CurrentPlayer
         +int CurrentPlayerIndex
 
-        +IRuleEngine RuleEngine
+        +AddPlayer(Color color) : void
+        +Start() : void
+        +Reset() : void
+        +End() : void
+        +RollDice(Dice dice) : int
+        +NextTurn() : void
+        +GetCurrentPlayer() : Player
+        +MovePawn(Player player, Pawn pawn, int steps) : bool
+        +GetMovablePawns(Player player, int roll) : List<Pawn>
+        +CheckWinCondition() : bool
 
-        +void Start()
-        +void Reset()
-        +void End()
-        +int RollDice()
-        +void NextTurn()
-        +Player GetCurrentPlayer()
-    }
-    class Board{
-        +List<Tiles> MainTrack
-        +Dictionary<.Player, List<Tile>> HomeStretch
-        +Dictionary<.Player, Tile> StartTiles
-        +Dictionary<.Player, Tile> HomeTile
+        -InitializePawnPositions() : void
+        -UpdatePawnPosition(Pawn pawn, Tile destination) : void
+        -HandleCapture(Pawn capturedPawn, Pawn capturingPawn) : void
+        
+        +PlacePawn(Pawn pawn) : void
+        +RemovePawn(Pawn pawn) : void
 
-        +void PlacePawn(Pawn pawn, Tile Tile)
-        +void RemovePawn(Pawn pawn)
-        +Tile GetTile(Pawn pawn)
-        +Tile MovePawn(Pawn Pawn, int Steps)
-        +void Reset()
+        +Action<.Player> PlayerWon : message event
+        +Action<.Pawn, Tile,Tile> PawnMoved : message event
+        +Action<.Pawn, Pawn> PawnCaptured : message event
+        
+        +CanMove(Game game, Pawn pawn, int roll) : bool
+        +GetDestination(Game game, Pawn pawn, int roll) : Tile
+        +IsCapture(Tile destination, Pawn movingPawn) : bool
+        +HasPlayerWon(Player player) : bool
+        +CanStartPawn(Pawn pawn, int roll) : bool
+        +IsExtraTurn(Pawn pawn, int roll) : bool
+        +CanEnterHome(Pawn pawn, int roll) : bool
+        +GetMovablePawns(Game game, Player player, int roll) : List<Pawn>
     }
+
     class Dice{
-        +int rollDice()
+        +int Sides
     }
+
+    class Pawn{
+        +int Id : readonly
+        +Color Color : readonly
+        +Coordiate Position : readonly
+        +PawnState State : readonly
+    }
+
+    class Tile{
+        +Coordinates Position
+        +TileType Type
+        +Color? PlayerColor
+        +List<.Pawn> Pawns
+    }
+
+    %%INTERFACES
+    class Board{
+        +Tile[,] Grid
+    }
+
     class IPlayer{
         <<Interface>>
-        +String Color
-        +List<Pawn> Pawns
+        +Color Color
+        +List<.Pawn> Pawns
         +PlayerState State
 
-        +bool AllPawnsFinished()
-        +pawn GetActivePawn(int roll)
+        +AllPawnsFinished() : bool
+        +GetActivePawn() : List<Pawn>
+        +GetFinishedPawnCount() : int
     }
-    class Pawn{
-        +int Position
-        +PawnState State
-        +int StepsMoved
-        +int TrackLength
-        +int GoalLength
 
-        +bool IsHome()
-        +bool IsActive()
-        +bool IsComplete()
+    class Player{
+        +Color Color : readonly
+        +List<.Pawn> Pawns
+        +PlayerState State
 
-    }
-    class Tile{
-        +TileType Type
-        +Pawn OccupiedBy
-
-        +bool isSafeZone()
-        +bool isOccupied()
+        +AllPawnsFinished() : bool
+        +GetActivePawn() : List<Pawn>
+        +GetFinishedPawnCount() : int
     }
 
     %%ENUMS
@@ -100,6 +120,13 @@ classDiagram
         Running
         Finished
     }
+    class Color{
+        <<enumeration>>
+        Red
+        Blue
+        Green
+        Yellow
+    }
     class PlayerState{
         <<Enumeration>>
         Active
@@ -107,35 +134,26 @@ classDiagram
     }
     class PawnState{
         <<Enumeration>>
-        Home
-        Active
-        Complete
+        StartPoint
+        Safe
+        Vulnerable
+        Fishished
     }
 
     class TileType{
         <<enumeration>>
+        Start
         Normal
         Safe
-        Start
         HomeEntry
         Home
     }
 
+    class Coordinates{
+        <<struct>>
+        +int X
+        +int Y
+        
 
-    class IGameEvent{
-        <<interface>>
-        +event Action<.Game> GameStarted
-        +event Action<.Game> GameRestart
-        +event Action<.Player, int> DiceRolled
-        +event Action<.Player, Piece, Tile, Tile> PawnMoved
-        +event Action<.Player> PlayerChanged
-        +event Action<.Player> PlayerWon
-    }
-
-    class IRuleEngine{
-        <<interface>>
-        +bool CanMove(Pawn pawn, int roll)
-        +Tile GetDestination(Pawn pawn, int roll)
-        +bool IsCapture(Tile destination)
-        +bool HasPlayerWon(Player player)
+        +Coordinates(int x, int y)
     }

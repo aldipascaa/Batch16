@@ -13,6 +13,7 @@ class Program
         //SecondLogic(x);
         //Console.WriteLine();
         ThirdLogic(x);
+        Console.WriteLine();
     }
     // First Logic Implementation using if-else statements
     static void FirstLogic(int x)
@@ -67,6 +68,25 @@ class Program
             foreach (var (key,value) in dictionary) output += i % key == 0 ? value : "";
             if (i != x) output += output != "" ? "," : $"{i},";
             Console.Write(output);
-        }
+        };
     }
-}
+    // Refactored FourthLogic using LINQ
+    static void FourthLogic(int x)
+    {
+        var dictionary = new Dictionary<int, string>()
+        {
+            {3, "foo"},
+            {4, "baz"},
+            {5, "bar"},
+            {7, "jazz"},
+            {9, "huzz"}
+        };
+        for (int i = 1; i <= x; i++)
+        {
+            string output = string.Concat(dictionary.Where(kv => i % kv.Key == 0).Select(kv => kv.Value));
+            if (i != x) output += output != "" ? "," : $"{i},";
+            Console.Write(output);
+        };
+    }
+} 
+

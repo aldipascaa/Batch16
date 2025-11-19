@@ -1,0 +1,15 @@
+C:\Users\aldipasca\Documents\Batch16\DominoGame\bin\Debug\net8.0\DominoGame.exe
+C:\Users\aldipasca\Documents\Batch16\DominoGame\bin\Debug\net8.0\DominoGame.deps.json
+C:\Users\aldipasca\Documents\Batch16\DominoGame\bin\Debug\net8.0\DominoGame.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\DominoGame\bin\Debug\net8.0\DominoGame.dll
+C:\Users\aldipasca\Documents\Batch16\DominoGame\bin\Debug\net8.0\DominoGame.pdb
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.dll
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\refint\DominoGame.dll
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.pdb
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\DominoGame.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\DominoGame\obj\Debug\net8.0\ref\DominoGame.dll
