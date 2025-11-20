@@ -1,12 +1,14 @@
+using System.Xml;
+
 namespace DominoGame;
 public class DominoSet
 {
-    private readonly Stack<DominoPiece> _pieces;
+    private readonly List<DominoPiece> _pieces;
     private readonly Random _random;
 
     public DominoSet()
     {
-        _pieces = new Stack<DominoPiece>();
+        _pieces = new List<DominoPiece>();
         _random = new Random();
         InitializeSet();
     }
@@ -28,24 +30,44 @@ public class DominoSet
         
         foreach (var piece in pieces)
         {
-            _pieces.Push(piece);
+            _pieces.Add(piece);
         }
     }
 
     private void Shuffle(List<DominoPiece> pieces)
     {
         int n = pieces.Count;
-        while (n > 1)
+        for (int i = n - 1; i > 0; i--)
         {
-            n--;
-            int k = _random.Next(n + 1);
-            (pieces[k], pieces[n]) = (pieces[n], pieces[k]);
+            int j = _random.Next(i + 1);
+            var temp = pieces[i];
+            int x = _random.Next(0,2);
+            if (x == 1)
+                pieces[j].SwapValues();
+            pieces[i] = pieces[j];
+            pieces[j] = temp;
         }
     }
 
-    public DominoPiece DrawPiece()
+    public DominoPiece? DrawPiece()
     {
-        return _pieces.Count > 0 ? _pieces.Pop() : null;
+        int x = _random.Next(0,_pieces.Count);
+        return GetPiece(x);
+    }
+    public DominoPiece? GetPiece(int index)
+    {
+        if (index < 0 || index >= _pieces.Count)
+            return null;
+        DominoPiece piece = _pieces.ElementAt(index);
+        _pieces.Remove(_pieces.ElementAt(index));
+        return piece;
+    }
+    public override string ToString()
+    {
+        string output = "";
+        for (int i = 0; i < _pieces.Count; i++)
+            output += $"{i+1}: [X|X]\n";
+        return output;
     }
 
     public bool IsEmpty() => _pieces.Count == 0;

@@ -1,0 +1,93 @@
+classDiagram
+    Game "1" -- "*" DominoPiece
+    Game "1" -- "1" DominoSet
+    Game "1" -- "1" Board
+    Game "1" -- "2..4" IPlayer
+
+    IPlayer "1" --> "n" HumanPlayer
+    IPlayer "1" --> "n" ComputerPlayer
+
+    class Game{
+        -list<.IPlayer> _players
+        -DominoSet _dominoSet
+        -Board _board
+        -int _currentPlayerIndex
+        -int _initialDomino
+
+        +Game()
+        +AddPlayer() : void
+        +StartGame() : void
+        +PlayGame() : void
+        +IsGameBlocked() : bool
+        -DeclareWinnerByScore() : void
+    }
+
+    class DominoPiece{
+        +LeftValue : int <.get; private set;>
+        +RigthValue : int <.get; private set;>
+        +DominoPiece(int left, int right)
+        +Mathches(int value) : bool
+        +Swap() : void
+        +GetScore() : int
+        +ToString() : string
+    }
+
+    class DominoSet{
+        -List<DominoPiece> _pieces : readonly
+        -Random _random : readonly
+
+        +Deck()
+        -InitializeDeck() : void
+        -Shuffle() : void
+        +DrawPiece() : DominoPiece
+        +GetPiece() : DominoPiece
+        +IsEmpty() : bool 
+        +ToString() : string
+    }
+
+    class Board{
+        +List<DominoPiece> pieces : readonly
+        +LeftEnd : int <.get; private set;>
+        +RightEnd : int <.get; private set;>
+        +isFirstPiece : bool
+        +CanPlacePiece : bool
+        +CanPlaceLeft : bool
+        +CanPlaceRight : bool
+        +PlacePiece(DominoPiece dominopiece) : void
+    }
+
+    class IPlayer{
+        +GetName() : string
+        +CanMakeMove(Board board) : bool
+        +MakeMove(Board board) : DominoPiece
+        +addPiece(DominoPiece piece) : void
+        +HasPiece() : bool
+        +GetScore() : int
+    }
+
+    class HumanPlayer{
+        -string name : readonly
+        -List<.DominoPiece> _hand : readonly
+
+        +HumanPlayer(string name)
+        +GetName() : string
+        +CanMakeMove(Board board) : bool
+        +MakeMove(Board board) : DominoPiece
+        +addPiece(DominoPiece piece) : void
+        +HasPiece() : bool
+        +GetScore() : int 
+    }
+
+    class ComputerPlayer{
+        -string name : readonly
+        -List<.DominoPiece> _hand : readonly
+        -Random _random : readonly
+
+        +ComputerPlayer(string name)
+        +GetName() : string
+        +CanMakeMove(Board board) : bool
+        +MakeMove(Board board) : DominoPiece
+        +addPiece(DominoPiece piece) : void
+        +HasPiece() : bool
+        +GetScore() : int 
+    }

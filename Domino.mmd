@@ -1,0 +1,113 @@
+---
+title: DOMINO - Class Diagram - Revision #1
+---
+classDiagram
+	DominoGame "1" -- "1" IDeck
+    DominoGame "1" -- "1" IBoard
+    DominoGame "1" -- "2..4" IPlayer
+    
+    IDeck "1" *-- "*" IDomino
+    IBoard "1" *-- "*" IDominoTile
+    
+    Deck ..|> IDeck
+    Board ..|> IBoard
+    Player ..|> IPlayer
+    DominoTile ..|> IDominoTile
+
+		%% Controller
+    class DominoGame {
+	    -List<.IPlayer> _players 
+	    -Dictionary<.IPlayer, List<.IDominoTile>> _playerTiles 
+	    -IDeck _deck
+	    -IBoard _board
+	    -Random _random : readonly
+	    -int _currentPlayerIndex
+      -bool _isGameDone
+      -int _tilesPerPlayer
+	    +GameLogging : event Action<string>
+		
+	    +DominoGame(List<.IPlayer> players, .IDeck deck, .IBoard board, int tilesPerPlayer, Action<string> gameLogging)
+	    
+	    %% Game
+	    +StartGame() void
+	    +IsGameStuck() bool
+	    +GetPlayerList() List<.IPlayer>
+			+GetPlayerTiles() Dictionary<.IPlayer, List<.IDominoTile>>
+			+GetCurrentPlayer() IPlayer
+			-NextPlayer() void
+				    
+	    %% Deck
+	    -InitializeTiles() void
+	    -ShuffleTiles() void
+	    -DealTilesToPlayer(int tilesPerPlayer) void
+	    +DrawTileForPlayer() IDominoTile
+	 	    	    
+	    %% Player
+	    -CanPlaceTile(.IDominoTile tile) bool
+	    -CanPlaceTileOnLeft(.IDominoTile tile) bool
+	    -CanPlaceTileOnRight(.IDominoTile tile) bool
+	    -PlaceTileToBoard(.IDominoTile tile) void
+	    -PlaceTileToBoard(.IDominoTile tile, string side) void
+	    -PlaceTileToLeft(.IDominoTile tile, int leftEnd) void
+	    -PlaceTileToRight(.IDominoTile tile, int rightEnd) void
+	    +HasAnyPlayableTile(.IPlayer player) bool
+	    -Flip(.IDominoTile tile) IDominoTile
+	    
+	    %% Validation
+	    -CanPlayRule(.IPlayer player, .IDominoTile tile) bool
+	    -IsTileMatches(int value, .IDominoTile tile) bool
+	    +IsPlayerWin(.IPlayer player) bool
+	    
+	    %% Event
+	    #OnGameLogging(string message) virtual void
+    }
+    
+    note for DominoGame "IsWin() : untuk cek current player tile(s) nya sudah habis atau belum"
+    note for DominoGame "HasAnyPlayableTile() : untuk cek apakah pemain masih memiliki tile untuk bermain"
+    note for DominoGame "IsGameStuck() : untuk cek game buntu atau tidak dengan cek HasAnyPlayableTile()"
+    note for DominoGame "OnGoingGame() : game yang sedang berlangsung yang nantinya ada di dalam Start()"
+    note for DominoGame "NextPlayer() : ada di dalam gameplay untuk mengubah _currentPlayerIndex untuk player selanjutnya"
+
+    class IDeck {
+	    <<interface>>
+	    +List<.IDominoTile> Tiles  
+	  }
+
+    class Deck {
+	    +List<.IDominoTile> Tiles
+    }
+    
+    class IBoard {
+	    <<interface>>
+	    +List<.IDominoTile> Tiles    
+	  }
+
+    class Board {
+	    +List<.IDominoTile> Tiles
+    }
+    
+    class IPlayer {
+	    <<interface>>
+	    +string Name
+    }
+
+    class Player {
+	    +string Name : readonly
+
+	    +Player(string name)
+	    +ToString() override string
+    }
+    
+    class IDominoTile {
+	    <<interface>>
+	    +int Left
+	    +int Right
+    }
+    
+    class DominoTile {
+	    +int Left : readonly
+	    +int Right : readonly
+
+	    +DominoTile(int left, int right)
+	    +ToString() override string
+    }

@@ -14,29 +14,28 @@ namespace DominoGame
             RightEnd = -1;
             isFirstPiece = true;
         }
-
         public bool CanPlacePiece(DominoPiece piece)
         {
             if (isFirstPiece) return true;
             
             return piece.Matches(LeftEnd) || piece.Matches(RightEnd);
         }
-
         public void PlacePiece(DominoPiece piece)
         {
             if (isFirstPiece)
             {
                 pieces.Add(piece);
+                Console.WriteLine(piece);
                 LeftEnd = piece.LeftValue;
                 RightEnd = piece.RightValue;
                 isFirstPiece = false;
                 return;
             }
 
-            if (piece.Matches(LeftEnd))
+            else if (piece.Matches(LeftEnd))
             {
                 // Place on left side
-                if (piece.RightValue == LeftEnd)
+                if (piece.LeftValue == LeftEnd)
                 {
                     // Piece needs to be rotated
                     piece.SwapValues();
@@ -48,7 +47,7 @@ namespace DominoGame
             else if (piece.Matches(RightEnd))
             {
                 // Place on right side
-                if (piece.LeftValue == RightEnd)
+                if (piece.RightValue == RightEnd)
                 {
                     // Piece needs to be rotated
                     piece.SwapValues();
@@ -61,6 +60,12 @@ namespace DominoGame
             {
                 throw new InvalidOperationException("Piece cannot be placed on the board");
             }
+        }
+        public override string ToString()
+        {
+            string output = "Domino Board: \n";
+            output += string.Join(", ",pieces);
+            return output;
         }
     }
 }

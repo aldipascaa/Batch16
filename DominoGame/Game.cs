@@ -5,6 +5,8 @@ public class Game
     private DominoSet _dominoSet;
     private Board _board;
     private int _currentPlayerIndex;
+    private int _initialDomino;
+    public Action<IPlayer>? OnWinnerFound;
 
     public Game()
     {
@@ -12,6 +14,7 @@ public class Game
         _dominoSet = new DominoSet();
         _board = new Board();
         _currentPlayerIndex = 0;
+        _initialDomino = 3;
     }
 
     public void AddPlayer(IPlayer player)
@@ -24,7 +27,7 @@ public class Game
         Console.WriteLine("Starting Domino Game!");
         
         // Deal initial pieces (7 each for 2 players)
-        for (int i = 0; i < 7; i++)
+        for (int i = 0; i < _initialDomino; i++)
         {
             foreach (var player in _players)
             {
@@ -38,7 +41,6 @@ public class Game
 
         PlayGame();
     }
-
     private void PlayGame()
     {
         while (true)
@@ -47,6 +49,7 @@ public class Game
             
             Console.WriteLine($"\n=== {currentPlayer.GetName()}'s Turn ===");
             Display(_board);
+            Console.WriteLine(currentPlayer);
 
             var playedPiece = currentPlayer.MakeMove(_board);
 
@@ -105,13 +108,10 @@ public class Game
 
         foreach (var player in _players)
         {
-            if (player is HumanPlayer humanPlayer)
+            if (player.CanMakeMove(_board))
             {
-                humanPlayer.DisplayHand();
+                return true;
             }
-
-            // For simplicity, we'll assume if any player has a playable piece, game continues
-            // In a real implementation, we'd need to check each player's pieces against board ends
         }
 
         return false; // Simplified implementation
@@ -147,10 +147,5 @@ public class Game
             Console.WriteLine($"\nEnds: {board.LeftEnd} | {board.RightEnd}");
         }
     }
-    
-    public bool IsFirstPiece() => _board.isFirstPiece;
-    public int GetLeftEnd() => _board.LeftEnd;
-    public int GetRightEnd() => _board.RightEnd;
-    
     #endregion
 }

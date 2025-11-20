@@ -3,36 +3,39 @@ public class HumanPlayer : IPlayer
 {
     private readonly string _name;
     private readonly List<DominoPiece> _hand;
-
     public HumanPlayer(string name)
     {
         _name = name;
         _hand = new List<DominoPiece>();
     }
-
     public string GetName() => _name;
-
     public void AddPiece(DominoPiece piece)
     {
         _hand.Add(piece);
     }
-
     public bool HasPieces() => _hand.Count > 0;
-
     public int GetScore() => _hand.Sum(piece => piece.GetScore());
-
-    public void DisplayHand()
+    public override string ToString()
     {
-        Console.WriteLine($"\n{_name}'s hand:");
+        string output = $"{_name}'s hand:\n";
         for (int i = 0; i < _hand.Count; i++)
-        {
-            Console.WriteLine($"{i + 1}: {_hand[i]}");
-        }
+            output += $"{i+1}: {_hand.ElementAt(i)}\n";
+        return output;
     }
-
-    public DominoPiece MakeMove(Board board)
+    public bool CanMakeMove(Board board)
     {
-        DisplayHand();
+        foreach(DominoPiece piece in _hand)
+        {
+            if (piece.Matches(board.LeftEnd) || piece.Matches(board.RightEnd))
+            {
+                return true;
+            }
+        }
+        return false;
+    }
+    public DominoPiece? MakeMove(Board board)
+    {
+        ToString();
         Console.WriteLine($"\nBoard ends: {board.LeftEnd} | {board.RightEnd}");
 
         while (true)
