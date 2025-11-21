@@ -1,0 +1,16 @@
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\bin\Debug\net8.0\Disposal and Garbage Collection.exe
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\bin\Debug\net8.0\Disposal and Garbage Collection.deps.json
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\bin\Debug\net8.0\Disposal and Garbage Collection.runtimeconfig.json
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\bin\Debug\net8.0\Disposal and Garbage Collection.dll
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\bin\Debug\net8.0\Disposal and Garbage Collection.pdb
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.AssemblyInfoInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.AssemblyInfo.cs
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.csproj.CoreCompileInputs.cache
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.sourcelink.json
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.dll
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\refint\Disposal and Garbage Collection.dll
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.pdb
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.genruntimeconfig.cache
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\ref\Disposal and Garbage Collection.dll
+C:\Users\aldipasca\Documents\Batch16\Disposal and Garbage Collection\obj\Debug\net8.0\Disposal and Garbage Collection.csproj.AssemblyReference.cache

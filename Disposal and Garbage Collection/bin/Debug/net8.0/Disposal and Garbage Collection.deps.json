@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Disposal and Garbage Collection/1.0.0": {
+        "runtime": {
+          "Disposal and Garbage Collection.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Disposal and Garbage Collection/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

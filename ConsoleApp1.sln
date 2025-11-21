@@ -61,6 +61,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DominoGame", "DominoGame\Do
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MyDominoGame", "MyDominoGame\MyDominoGame.csproj", "{131DBF95-CA12-4BFD-B656-0C7845FD8A1C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Disposal and Garbage Collection", "Disposal and Garbage Collection\Disposal and Garbage Collection.csproj", "{4D6D6B4D-EF03-405E-A850-1E27C8291822}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -190,5 +192,9 @@ Global
 		{131DBF95-CA12-4BFD-B656-0C7845FD8A1C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{131DBF95-CA12-4BFD-B656-0C7845FD8A1C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{131DBF95-CA12-4BFD-B656-0C7845FD8A1C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4D6D6B4D-EF03-405E-A850-1E27C8291822}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4D6D6B4D-EF03-405E-A850-1E27C8291822}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4D6D6B4D-EF03-405E-A850-1E27C8291822}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4D6D6B4D-EF03-405E-A850-1E27C8291822}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal
