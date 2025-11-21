@@ -3,7 +3,6 @@ public class DominoPiece
 {
     public int LeftValue { get ; private set; }
     public int RightValue { get; private set; }
-
     public DominoPiece(int left, int right)
     {
         LeftValue = left;
