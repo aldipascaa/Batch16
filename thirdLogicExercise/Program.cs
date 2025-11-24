@@ -13,12 +13,11 @@ class Program
         Console.WriteLine("");
         // Demonstration using MyClass to add logic at runtime
         var my = new MyClass();
-        my.AddLogic("foo", 3);
-        my.AddLogic("baz", 4);
-        my.AddLogic("bar", 5);
-        my.AddLogic("jazz", 7);
-        my.AddLogic("huzz", 9);
-
+        my.AddLogic(3, "foo");
+        my.AddLogic(4, "baz");
+        my.AddLogic(5, "bar");
+        my.AddLogic(7, "jazz");
+        my.AddLogic(9, "huzz");
         my.PrintRange(x);
     }
     // First Logic Implementation using if-else statements
@@ -81,20 +80,11 @@ class Program
     {
         private readonly List<KeyValuePair<int, string>> _rules = new();
         // Preferred C# naming
-        public void AddLogic(string value, int key)
-        {
-            _rules.Add(new KeyValuePair<int, string>(key, value));
-        }
-        // Returns either the concatenated values or the number as string
-        
+        public void AddLogic(int key, string value)=> _rules.Add(new KeyValuePair<int, string>(key, value));
         public string GetOutputFor(int i)
         {
             var sb = new StringBuilder();
-            foreach (var kv in _rules)
-            {
-                if (kv.Key != 0 && i % kv.Key == 0)
-                    sb.Append(kv.Value);
-            }
+            foreach (var (key,value) in _rules) if (key != 0 && i % key == 0) sb.Append(value);
             return sb.Length > 0 ? sb.ToString() : i.ToString();
         }
         // Prints 1..x using the rules, matching the comma-separated format used elsewhere
