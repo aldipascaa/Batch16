@@ -9,8 +9,8 @@ class Program
     {
         Console.WriteLine("Pick a number!!");
         int x = Convert.ToInt32(Console.ReadLine());
-        ThirdLogic(x);
-        Console.WriteLine("");
+        //ThirdLogic(x);
+        //Console.WriteLine("");
         // Demonstration using MyClass to add logic at runtime
         var my = new MyClass();
         my.AddLogic(3, "foo");
