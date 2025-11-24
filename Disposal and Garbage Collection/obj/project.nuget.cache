@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "EaxOzEbwq6s=",
+  "dgSpecHash": "QSUu+fzJG18=",
   "success": true,
-  "projectFilePath": "C:\\Users\\aldipasca\\Documents\\Batch16\\Disposal and Garbage Collection\\Disposal and Garbage Collection.csproj",
+  "projectFilePath": "D:\\Documents\\Batch16\\Disposal and Garbage Collection\\Disposal and Garbage Collection.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\aldipasca\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.7\\system.configuration.configurationmanager.9.0.7.nupkg.sha512",
-    "C:\\Users\\aldipasca\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.7\\system.diagnostics.eventlog.9.0.7.nupkg.sha512",
-    "C:\\Users\\aldipasca\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.7\\system.diagnostics.performancecounter.9.0.7.nupkg.sha512",
-    "C:\\Users\\aldipasca\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.7\\system.security.cryptography.protecteddata.9.0.7.nupkg.sha512"
+    "C:\\Users\\DELL\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.7\\system.configuration.configurationmanager.9.0.7.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.7\\system.diagnostics.eventlog.9.0.7.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\system.diagnostics.performancecounter\\9.0.7\\system.diagnostics.performancecounter.9.0.7.nupkg.sha512",
+    "C:\\Users\\DELL\\.nuget\\packages\\system.security.cryptography.protecteddata\\9.0.7\\system.security.cryptography.protecteddata.9.0.7.nupkg.sha512"
   ],
   "logs": []
 }

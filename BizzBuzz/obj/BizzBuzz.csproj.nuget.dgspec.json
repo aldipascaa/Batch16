@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aldipasca\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {}
+    "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aldipasca\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {
+    "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aldipasca\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
         "projectName": "BizzBuzz",
-        "projectPath": "C:\\Users\\aldipasca\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
-        "packagesPath": "C:\\Users\\aldipasca\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aldipasca\\Documents\\Batch16\\BizzBuzz\\obj\\",
+        "projectPath": "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
+        "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+        "outputPath": "D:\\Documents\\Batch16\\BizzBuzz\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\aldipasca\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net8.0"
@@ -58,7 +58,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

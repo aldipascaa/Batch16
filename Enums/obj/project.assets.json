@@ -8,19 +8,19 @@
     "net8.0": []
   },
   "packageFolders": {
-    "C:\\Users\\aldipasca\\.nuget\\packages\\": {}
+    "C:\\Users\\DELL\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\aldipasca\\Documents\\Batch16\\Enums\\Enums.csproj",
+      "projectUniqueName": "D:\\Documents\\Batch16\\Enums\\Enums.csproj",
       "projectName": "Enums",
-      "projectPath": "C:\\Users\\aldipasca\\Documents\\Batch16\\Enums\\Enums.csproj",
-      "packagesPath": "C:\\Users\\aldipasca\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\aldipasca\\Documents\\Batch16\\Enums\\obj\\",
+      "projectPath": "D:\\Documents\\Batch16\\Enums\\Enums.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\Documents\\Batch16\\Enums\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\aldipasca\\AppData\\Roaming\\NuGet\\NuGet.Config"
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
@@ -64,7 +64,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.415/PortableRuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.416/PortableRuntimeIdentifierGraph.json"
       }
     }
   }
