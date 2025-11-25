@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "QSUu+fzJG18=",
+  "dgSpecHash": "+mejtrur4ys=",
   "success": true,
-  "projectFilePath": "D:\\Documents\\Batch16\\Disposal and Garbage Collection\\Disposal and Garbage Collection.csproj",
+  "projectFilePath": "D:\\Documents\\aldipascaa\\Batch16\\Disposal and Garbage Collection\\Disposal and Garbage Collection.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\DELL\\.nuget\\packages\\system.configuration.configurationmanager\\9.0.7\\system.configuration.configurationmanager.9.0.7.nupkg.sha512",
     "C:\\Users\\DELL\\.nuget\\packages\\system.diagnostics.eventlog\\9.0.7\\system.diagnostics.eventlog.9.0.7.nupkg.sha512",
