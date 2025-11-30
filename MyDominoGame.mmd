@@ -8,9 +8,9 @@ classDiagram
     IPlayer "1" --> "n" ComputerPlayer
 
     class Game{
-        -list<.IPlayer> _players
-        -DominoSet _dominoSet
-        -Board _board
+        +list<.IPlayer> players
+        +DominoSet dominoSet
+        +Board board
         -int _currentPlayerIndex
         -int _initialDomino
 

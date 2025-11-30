@@ -1,0 +1,33 @@
+﻿<Page x:Class="ReDominoWPF.Pages.LandingPage"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+      mc:Ignorable="d"
+      Background="#F0F0F0"
+      Loaded="Page_Loaded">
+    <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+        <StackPanel Width="450">
+            <TextBlock Text="Domino Game" FontSize="48" FontWeight="Bold" Foreground="#1F4E78" 
+                       TextAlignment="Center" Margin="0,0,0,20"/>
+
+            <StackPanel Margin="0,0,0,20">
+                <TextBlock Text="Player Name" FontSize="14" FontWeight="Bold" Foreground="#333" Margin="0,0,0,8"/>
+                <TextBox x:Name="PlayerNameTextBox" Height="40" Padding="12,10" FontSize="14" 
+                         Text="Player 1" VerticalContentAlignment="Center"/>
+            </StackPanel>
+
+            <StackPanel Margin="0,0,0,20">
+                <TextBlock Text="Initial Dominos per Player" FontSize="14" FontWeight="Bold" Foreground="#333" Margin="0,0,0,8"/>
+                <StackPanel Orientation="Horizontal">
+                    <RadioButton x:Name="Dominos5" Content="5" FontSize="14" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                    <RadioButton x:Name="Dominos6" Content="6" FontSize="14" Margin="0,0,12,0" VerticalAlignment="Center"/>
+                    <RadioButton x:Name="Dominos7" Content="7" FontSize="14" IsChecked="True" VerticalAlignment="Center"/>
+                </StackPanel>
+            </StackPanel>
+
+            <Button x:Name="StartButton" Content="Start Game" Height="50" FontSize="16" FontWeight="Bold" 
+                    Background="#4CAF50" Foreground="White" Click="StartButton_Click" Cursor="Hand" Margin="0,20,0,0"/>
+        </StackPanel>
+    </Grid>
+</Page>

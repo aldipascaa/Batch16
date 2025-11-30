@@ -3,6 +3,7 @@ public class Game
 {
     private readonly List<IPlayer> _players;
     private DominoSet _dominoSet;
+    private DominoPiece _piece;
     private Board _board;
     private int _currentPlayerIndex;
     private int _initialDomino;
@@ -16,11 +17,7 @@ public class Game
         _currentPlayerIndex = 0;
         _initialDomino = 3;
     }
-
-    public void AddPlayer(IPlayer player)
-    {
-        _players.Add(player);
-    }
+    public void AddPlayer(IPlayer player) => _players.Add(player);
 
     // Expose a read-only view of players for UI
     public IReadOnlyList<IPlayer> Players => _players.AsReadOnly();
@@ -46,7 +43,6 @@ public class Game
             }
         }
     }
-
     public void StartGame()
     {
         Console.WriteLine("Starting Domino Game!");
@@ -125,7 +121,6 @@ public class Game
             _currentPlayerIndex = (_currentPlayerIndex + 1) % _players.Count;
         }
     }
-
     private bool IsGameBlocked()
     {
         // Game is blocked if no player can make a move and the boneyard is empty
@@ -141,7 +136,11 @@ public class Game
 
         return false; // Simplified implementation
     }
-
+    public void SwapValues(int a, int b)
+    {
+        _piece.LeftValue = a;
+        _piece.RightValue = b;
+    }
     private void DeclareWinnerByScore()
     {
         var winner = _players.OrderBy(p => p.GetScore()).First();
