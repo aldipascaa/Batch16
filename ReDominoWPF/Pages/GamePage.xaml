@@ -28,34 +28,54 @@
         </Border>
 
         <!-- Computer Dominos (face-down, no numbers) -->
-        <GroupBox Grid.Row="1" Header="Opponent's Dominos" Margin="6" Padding="6" >
-            <WrapPanel x:Name="ComputerDominosPanel" Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+        <GroupBox Grid.Row="1" Margin="6" Padding="6" BorderThickness="0">
+            <StackPanel>
+                <TextBlock Text="Computer's Dominos"
+                   HorizontalAlignment="Center"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Margin="0,0,0,10" />
+
+                <WrapPanel x:Name="ComputerDominosPanel" 
+                       Orientation="Horizontal" 
+                       HorizontalAlignment="Center" 
+                       VerticalAlignment="Center"/>
+            </StackPanel>
         </GroupBox>
 
         <!-- Board -->
-        <GroupBox Grid.Row="2" Header="Board" Margin="6" Padding="16">
+        <GroupBox Grid.Row="2" Margin="6" Padding="16" BorderThickness="0">
             <ScrollViewer HorizontalScrollBarVisibility="Auto" VerticalScrollBarVisibility="Auto" HorizontalAlignment="Center" VerticalAlignment="Center">
                 <WrapPanel x:Name="BoardPanel" Orientation="Horizontal"/>
             </ScrollViewer>
         </GroupBox>
 
         <!-- Player Hand (clickable dominos) -->
-        <GroupBox Grid.Row="3" Header="Your Dominos" Margin="6" Padding="6">
-            <Grid>
-                <Grid.ColumnDefinitions>
-                    <ColumnDefinition Width="*"/>
-                    <ColumnDefinition Width="Auto"/>
-                </Grid.ColumnDefinitions>
-
-                <WrapPanel x:Name="PlayerDominosPanel" Grid.Column="0"
+        <GroupBox Grid.Row="3" Margin="6" Padding="6" BorderThickness="0">
+            <StackPanel>
+                <TextBlock
+                   HorizontalAlignment="Center"
+                   FontSize="16"
+                   FontWeight="Bold"
+                   Margin="0,0,0,10">
+                    <Run  Text="{Binding playerName}"/>
+                    <Run Text=" Dominos"/>
+                </TextBlock>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="Auto"/>
+                    </Grid.ColumnDefinitions>
+                    <WrapPanel x:Name="PlayerDominosPanel" Grid.Column="0"
                            Orientation="Horizontal" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-
-                <StackPanel Grid.Column="1" Margin="16,0,0,0" VerticalAlignment="Center">
-                    <Button x:Name="DrawButton" Content="Draw" Width="100" Height="45" 
+                    <StackPanel Grid.Column="1" Margin="16,0,0,0" VerticalAlignment="Center">
+                        <Button x:Name="DrawButton" Content="Draw" Width="100" Height="45" 
                             Background="#2196F3" Foreground="White" FontWeight="Bold" Click="DrawButton_Click"
                             Cursor="Hand" Margin="0,0,0,8"/>
-                </StackPanel>
-            </Grid>
+                    </StackPanel>
+                </Grid>
+            </StackPanel>
+       
         </GroupBox> 
     </Grid>
 </Page>

@@ -92,7 +92,7 @@ namespace ReDominoWPF.Pages {
                 return;
             }
             _contentLoaded = true;
-            System.Uri resourceLocater = new System.Uri("/ReDominoWPF;V1.0.0.0;component/pages/landingpage.xaml", System.UriKind.Relative);
+            System.Uri resourceLocater = new System.Uri("/ReDominoWPF;component/pages/landingpage.xaml", System.UriKind.Relative);
             
             #line 1 "..\..\..\..\Pages\LandingPage.xaml"
             System.Windows.Application.LoadComponent(this, resourceLocater);

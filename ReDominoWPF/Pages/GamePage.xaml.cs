@@ -10,7 +10,7 @@ namespace ReDominoWPF.Pages
     public partial class GamePage : Page
     {
         private GameController _gameController;
-        private string _playerName;
+        public string playerName { get; set; } = "Player 1";
         private int _initialDominos;
         private IPlayer _humanPlayer;
         private IPlayer _computerPlayer;
@@ -19,8 +19,9 @@ namespace ReDominoWPF.Pages
         public GamePage(string playerName, int initialDominos)
         {
             InitializeComponent();
-            _playerName = playerName;
+            this.playerName = playerName;
             _initialDominos = initialDominos;
+            DataContext = this;
         }
 
         private void Page_Loaded(object sender, RoutedEventArgs e)
@@ -28,7 +29,7 @@ namespace ReDominoWPF.Pages
             try
             {
                 _gameController = new GameController { InitialDomino = _initialDominos };
-                _gameController.StartNewGame(_playerName);
+                _gameController.StartNewGame(playerName);
 
                 var players = _gameController.PlayerDominos.Keys.ToList();
                 _humanPlayer = players[0];
