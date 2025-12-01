@@ -21,9 +21,10 @@
                            VerticalAlignment="Center"/>
                 <TextBlock x:Name="GameStatusTextBlock" FontSize="14" Foreground="#666" Margin="20,0,0,0"
                            VerticalAlignment="Center"/>
-                <Button x:Name="RestartButton" Content="Restart" Margin="16,0,0,0" Width="100" Height="40"
+                <Button x:Name="RestartButton" Content="Restart" Margin="16,0,0,0" Width="60" Height="40"
                         Background="#FF9800" Foreground="White" FontWeight="Bold" Click="RestartButton_Click"
                         HorizontalAlignment="Right" VerticalAlignment="Center"/>
+                <Button x:Name="PlayPauseButton" Content="Music on" Margin="16,0,0,0" Click="PlayPauseButton_Click" Width="100" Height="40"/>
             </StackPanel>
         </Border>
 

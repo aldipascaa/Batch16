@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("ReDominoWPF")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56c59a9c786a6d3ff8ac99dbf4e8d663c0e8508a")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+eda0279cddbb9f451cd18b89df02f6a3ab75ef08")]
 [assembly: System.Reflection.AssemblyProductAttribute("ReDominoWPF")]
 [assembly: System.Reflection.AssemblyTitleAttribute("ReDominoWPF")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

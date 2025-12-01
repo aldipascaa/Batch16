@@ -10,20 +10,21 @@ namespace ReDominoWPF.Pages
     public partial class GamePage : Page
     {
         private GameController _gameController;
+        private MediaPlayer mediaPlayer = new MediaPlayer();
+        private bool _isPlaying = false;
         public string playerName { get; set; } = "Player 1";
         private int _initialDominos;
         private IPlayer _humanPlayer;
         private IPlayer _computerPlayer;
         private bool _isGameRunning = true;
-
         public GamePage(string playerName, int initialDominos)
         {
             InitializeComponent();
             this.playerName = playerName;
             _initialDominos = initialDominos;
             DataContext = this;
+            mediaPlayer.Open(new Uri("Music.Assets.mp3", UriKind.Relative));
         }
-
         private void Page_Loaded(object sender, RoutedEventArgs e)
         {
             try
@@ -42,7 +43,21 @@ namespace ReDominoWPF.Pages
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
+        private void PlayPauseButton_Click(object sender, RoutedEventArgs e)
+        {
+            if (_isPlaying)
+            {
+                mediaPlayer.Pause();
+                PlayPauseButton.Content = "Music On";
+                _isPlaying = false;
+            }
+            else
+            {
+                mediaPlayer.Play();
+                PlayPauseButton.Content = "Music Off";
+                _isPlaying = true;
+            }
+        }
         private void RefreshUI()
         {
             if (!_isGameRunning) return;
@@ -68,7 +83,6 @@ namespace ReDominoWPF.Pages
                     MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
         private void DrawBoard()
         {
             BoardPanel.Children.Clear();
@@ -80,7 +94,6 @@ namespace ReDominoWPF.Pages
                 BoardPanel.Children.Add(dominoControl);
             }
         }
-
         private void DrawComputerDominos()
         {
             ComputerDominosPanel.Children.Clear();
@@ -90,7 +103,6 @@ namespace ReDominoWPF.Pages
                 ComputerDominosPanel.Children.Add(CreateFaceDownDomino());
             }
         }
-
         private void DrawPlayerDominos()
         {
             PlayerDominosPanel.Children.Clear();
@@ -106,7 +118,6 @@ namespace ReDominoWPF.Pages
                 PlayerDominosPanel.Children.Add(dominoControl);
             }
         }
-
         private void PlayerDominoClick(int index)
         {
             if (_gameController.CurrentPlayerIndex != 0) return;
@@ -141,7 +152,6 @@ namespace ReDominoWPF.Pages
                 MessageBox.Show($"Error: {ex.Message}", "Game Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
-
         private void DrawButton_Click(object sender, RoutedEventArgs e)
         {
             if (_gameController.CurrentPlayerIndex != 0) return;
@@ -159,7 +169,6 @@ namespace ReDominoWPF.Pages
             _gameController.CurrentPlayerIndex = 1;
             RefreshUI();
         }
-
         private void ComputerTurn()
         {
             System.Threading.Thread.Sleep(500);
@@ -197,7 +206,6 @@ namespace ReDominoWPF.Pages
             _gameController.CurrentPlayerIndex = 0;
             RefreshUI();
         }
-
         private void RestartButton_Click(object sender, RoutedEventArgs e)
         {
             var result = MessageBox.Show("Are you sure you want to restart?", "Restart Game",
@@ -208,19 +216,19 @@ namespace ReDominoWPF.Pages
                 NavigationService.Navigate(new LandingPage());
             }
         }
-
         private void ShowWinnerPopup(string winner)
         {
             _isGameRunning = false;
-            var result = MessageBox.Show($"🎉 {winner} wins the game!\n\nWould you like to play again?",
+            var result = MessageBox.Show($"{winner} wins the game!\n\nWould you like to play again?",
                 "Game Over", MessageBoxButton.YesNo, MessageBoxImage.Information);
 
             if (result == MessageBoxResult.Yes)
             {
                 NavigationService.Navigate(new LandingPage());
             }
+            else 
+                Application.Current.Shutdown();
         }
-
         private Border CreateDominoControl(int leftValue, int rightValue)
         {
             bool isDouble = leftValue == rightValue;
@@ -378,7 +386,6 @@ namespace ReDominoWPF.Pages
             border.Child = grid;
             return border;
         }
-
         private Border CreateFaceDownDomino()
         {
             var border = new Border

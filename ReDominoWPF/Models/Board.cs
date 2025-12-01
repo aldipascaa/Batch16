@@ -7,9 +7,12 @@ namespace ReDominoWPF.Models
         public List<IDomino> dominos { get; set; }
         public int Height { get; set; }
         public int Width { get; set; }
-        public Board()
+        public Board(int height, int weight)
         {
+            Height = height;
+            Width = weight;
             dominos = new List<IDomino>();
+
         }
     }
 }

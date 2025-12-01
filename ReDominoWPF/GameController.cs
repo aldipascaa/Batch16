@@ -20,7 +20,7 @@ namespace ReDominoWPF
         {
             PlayerDominos = new Dictionary<IPlayer, List<IDomino>>();
             DominoSet = new List<IDomino>();
-            Board = new Board();
+            Board = new Board(5,5);
         }
 
         public void StartNewGame(string humanName)
