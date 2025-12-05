@@ -1,0 +1,10 @@
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.csproj.AssemblyReference.cache
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\rpswa.dswa.cache.json
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.GeneratedMSBuildEditorConfig.editorconfig
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.AssemblyInfoInputs.cache
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.AssemblyInfo.cs
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.csproj.CoreCompileInputs.cache
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.MvcApplicationPartsAssemblyInfo.cache
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.RazorAssemblyInfo.cache
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.RazorAssemblyInfo.cs
+D:\Documents\Batch16\RepositoryMVC\RepositoryMVC\obj\Debug\net10.0\RepositoryMVC.sourcelink.json
