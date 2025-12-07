@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\aldipascaa\\Batch16\\DominoGame\\DominoGame.csproj",
+      "projectUniqueName": "D:\\Documents\\Batch16\\DominoGame\\DominoGame.csproj",
       "projectName": "DominoGame",
-      "projectPath": "D:\\Documents\\aldipascaa\\Batch16\\DominoGame\\DominoGame.csproj",
+      "projectPath": "D:\\Documents\\Batch16\\DominoGame\\DominoGame.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\aldipascaa\\Batch16\\DominoGame\\obj\\",
+      "outputPath": "D:\\Documents\\Batch16\\DominoGame\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

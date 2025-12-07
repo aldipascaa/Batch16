@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\aldipascaa\\Batch16\\MyDominoGame\\MyDominoGame.csproj": {}
+    "D:\\Documents\\Batch16\\MyDominoGame\\MyDominoGame.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\aldipascaa\\Batch16\\MyDominoGame\\MyDominoGame.csproj": {
+    "D:\\Documents\\Batch16\\MyDominoGame\\MyDominoGame.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\aldipascaa\\Batch16\\MyDominoGame\\MyDominoGame.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\MyDominoGame\\MyDominoGame.csproj",
         "projectName": "MyDominoGame",
-        "projectPath": "D:\\Documents\\aldipascaa\\Batch16\\MyDominoGame\\MyDominoGame.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\MyDominoGame\\MyDominoGame.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\aldipascaa\\Batch16\\MyDominoGame\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\MyDominoGame\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

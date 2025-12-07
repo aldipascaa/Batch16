@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\aldipascaa\\Batch16\\Composition\\Composition.csproj",
+      "projectUniqueName": "D:\\Documents\\Batch16\\Composition\\Composition.csproj",
       "projectName": "Composition",
-      "projectPath": "D:\\Documents\\aldipascaa\\Batch16\\Composition\\Composition.csproj",
+      "projectPath": "D:\\Documents\\Batch16\\Composition\\Composition.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\aldipascaa\\Batch16\\Composition\\obj\\",
+      "outputPath": "D:\\Documents\\Batch16\\Composition\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

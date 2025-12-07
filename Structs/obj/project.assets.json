@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\aldipascaa\\Batch16\\Structs\\Structs.csproj",
+      "projectUniqueName": "D:\\Documents\\Batch16\\Structs\\Structs.csproj",
       "projectName": "Structs",
-      "projectPath": "D:\\Documents\\aldipascaa\\Batch16\\Structs\\Structs.csproj",
+      "projectPath": "D:\\Documents\\Batch16\\Structs\\Structs.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\aldipascaa\\Batch16\\Structs\\obj\\",
+      "outputPath": "D:\\Documents\\Batch16\\Structs\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\aldipascaa\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {}
+    "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\aldipascaa\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {
+    "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\aldipascaa\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
         "projectName": "BizzBuzz",
-        "projectPath": "D:\\Documents\\aldipascaa\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\BizzBuzz\\BizzBuzz.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\aldipascaa\\Batch16\\BizzBuzz\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\BizzBuzz\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

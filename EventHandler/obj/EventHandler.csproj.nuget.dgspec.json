@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\aldipascaa\\Batch16\\EventHandler\\EventHandler.csproj": {}
+    "D:\\Documents\\Batch16\\EventHandler\\EventHandler.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\aldipascaa\\Batch16\\EventHandler\\EventHandler.csproj": {
+    "D:\\Documents\\Batch16\\EventHandler\\EventHandler.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\aldipascaa\\Batch16\\EventHandler\\EventHandler.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\EventHandler\\EventHandler.csproj",
         "projectName": "EventHandler",
-        "projectPath": "D:\\Documents\\aldipascaa\\Batch16\\EventHandler\\EventHandler.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\EventHandler\\EventHandler.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\aldipascaa\\Batch16\\EventHandler\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\EventHandler\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
