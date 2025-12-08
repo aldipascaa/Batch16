@@ -28,7 +28,7 @@ public class DoctorService : IDoctorService
 
     public async Task<ServiceResult<DoctorReadDto>> GetByIdAsync(int id)
     {
-        var e = await _db.Patients.FindAsync(id);
+        var e = await _db.Doctors.FindAsync(id);
         if (e is null) return ServiceResult<DoctorReadDto>.NotFound("Patient not found");
         return ServiceResult<DoctorReadDto>.Ok(_mapper.Map<DoctorReadDto>(e));
     }
@@ -36,7 +36,7 @@ public class DoctorService : IDoctorService
     public async Task<ServiceResult<DoctorReadDto>> CreateAsync(DoctorCreateDto dto)
     {
         if (await _db.Doctors.AnyAsync(p => p.LicenseNumber == dto.LicenseNumber))
-            return ServiceResult<DoctorReadDto>.BadRequest("MRN already exists");
+            return ServiceResult<DoctorReadDto>.BadRequest("License number already exists");
 
         var e = _mapper.Map<Doctor>(dto);
         _db.Doctors.Add(e);
@@ -46,8 +46,8 @@ public class DoctorService : IDoctorService
 
     public async Task<ServiceResult<bool>> UpdateAsync(int id, DoctorUpdateDto dto)
     {
-        var e = await _db.Patients.FindAsync(id);
-        if (e is null) return ServiceResult<bool>.NotFound("Patient not found");
+        var e = await _db.Doctors.FindAsync(id);
+        if (e is null) return ServiceResult<bool>.NotFound("Doctor not found");
         _mapper.Map(dto, e);
         await _db.SaveChangesAsync();
         return ServiceResult<bool>.Ok(true);
@@ -55,9 +55,9 @@ public class DoctorService : IDoctorService
 
     public async Task<ServiceResult<bool>> DeleteAsync(int id)
     {
-        var e = await _db.Patients.FindAsync(id);
-        if (e is null) return ServiceResult<bool>.NotFound("Patient not found");
-        _db.Patients.Remove(e);
+        var e = await _db.Doctors.FindAsync(id);
+        if (e is null) return ServiceResult<bool>.NotFound("Doctor not found");
+        _db.Doctors.Remove(e);
         await _db.SaveChangesAsync();
         return ServiceResult<bool>.Ok(true);
     }

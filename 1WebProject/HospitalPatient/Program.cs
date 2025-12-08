@@ -9,6 +9,7 @@ using HospitalPatient.Mapping;
 using HospitalPatient.Services;
 using FluentValidation;
 using FluentValidation.AspNetCore;
+using Microsoft.AspNetCore.Identity;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -20,9 +21,8 @@ builder.Services.AddDbContext<HospitalDb>(opt =>
 builder.Services.AddControllers();
 
 // FluentValidation
-builder.Services.AddFluentValidationAutoValidation()
-                .AddValidatorsFromAssemblyContaining<HospitalPatient.DTOs.PatientCreateDtoValidator>();
-
+builder.Services.AddFluentValidationAutoValidation();
+builder.Services.AddFluentValidationClientsideAdapters();
 // AutoMapper
 builder.Services.AddAutoMapper(cfg => cfg.AddProfile<MappingProfile>());
 
@@ -66,7 +66,24 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 
+builder.Services.AddIdentityCore<IdentityUser>(options=>
+{
+    options.User.RequireUniqueEmail = true;
+    options.Password = new PasswordOptions
+    {
+            RequireDigit = true,
+            RequiredLength = 8,
+            RequireLowercase = true,
+            RequireUppercase = true,
+            RequireNonAlphanumeric = false
+
+    };
+})
+.AddRoles<IdentityRole>();
+
 // DI: Services
+builder.Services.AddScoped<IDepartmentService, DepartmentService>();
+builder.Services.AddScoped<IDoctorService, DoctorService>();
 builder.Services.AddScoped<IPatientService, PatientService>();
 builder.Services.AddScoped<IAppointmentService, AppointmentService>();
 

@@ -1,13 +1,13 @@
 
+using System.Data;
 using FluentValidation;
 
 namespace HospitalPatient.DTOs;
 
-public class PatientCreateDtoValidator : AbstractValidator<PatientCreateDto>
+public class UpdatePatientValidator : AbstractValidator<PatientUpdateDto>
 {
-    public PatientCreateDtoValidator()
+    public UpdatePatientValidator()
     {
-        RuleFor(x => x.MedicalRecordNumber).NotEmpty().MaximumLength(50);
         RuleFor(x => x.FullName).NotEmpty().MaximumLength(200);
         RuleFor(x => x.DateOfBirth).LessThan(DateTime.UtcNow);
         RuleFor(x => x.Email).EmailAddress().When(x => !string.IsNullOrWhiteSpace(x.Email));
