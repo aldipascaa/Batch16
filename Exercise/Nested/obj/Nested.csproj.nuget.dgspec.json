@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\Batch16\\Nested\\Nested.csproj": {}
+    "D:\\Documents\\Batch16\\Exercise\\Nested\\Nested.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\Batch16\\Nested\\Nested.csproj": {
+    "D:\\Documents\\Batch16\\Exercise\\Nested\\Nested.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\Batch16\\Nested\\Nested.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\Exercise\\Nested\\Nested.csproj",
         "projectName": "Nested",
-        "projectPath": "D:\\Documents\\Batch16\\Nested\\Nested.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\Exercise\\Nested\\Nested.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\Batch16\\Nested\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\Exercise\\Nested\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

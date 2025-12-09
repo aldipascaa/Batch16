@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\Batch16\\ExerciseDay2\\ExerciseDay2.csproj": {}
+    "D:\\Documents\\Batch16\\Exercise\\ExerciseDay2\\ExerciseDay2.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\Batch16\\ExerciseDay2\\ExerciseDay2.csproj": {
+    "D:\\Documents\\Batch16\\Exercise\\ExerciseDay2\\ExerciseDay2.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\Batch16\\ExerciseDay2\\ExerciseDay2.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\Exercise\\ExerciseDay2\\ExerciseDay2.csproj",
         "projectName": "ExerciseDay2",
-        "projectPath": "D:\\Documents\\Batch16\\ExerciseDay2\\ExerciseDay2.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\Exercise\\ExerciseDay2\\ExerciseDay2.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\Batch16\\ExerciseDay2\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\Exercise\\ExerciseDay2\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

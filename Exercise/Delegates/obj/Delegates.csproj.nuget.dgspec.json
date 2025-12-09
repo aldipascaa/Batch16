@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\Batch16\\Delegates\\Delegates.csproj": {}
+    "D:\\Documents\\Batch16\\Exercise\\Delegates\\Delegates.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\Batch16\\Delegates\\Delegates.csproj": {
+    "D:\\Documents\\Batch16\\Exercise\\Delegates\\Delegates.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\Batch16\\Delegates\\Delegates.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\Exercise\\Delegates\\Delegates.csproj",
         "projectName": "Delegates",
-        "projectPath": "D:\\Documents\\Batch16\\Delegates\\Delegates.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\Exercise\\Delegates\\Delegates.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\Batch16\\Delegates\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\Exercise\\Delegates\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

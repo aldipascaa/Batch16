@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\Batch16\\Calculator\\Calculator.csproj",
+      "projectUniqueName": "D:\\Documents\\Batch16\\TryProject\\Calculator\\Calculator.csproj",
       "projectName": "Calculator",
-      "projectPath": "D:\\Documents\\Batch16\\Calculator\\Calculator.csproj",
+      "projectPath": "D:\\Documents\\Batch16\\TryProject\\Calculator\\Calculator.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\Batch16\\Calculator\\obj\\",
+      "outputPath": "D:\\Documents\\Batch16\\TryProject\\Calculator\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

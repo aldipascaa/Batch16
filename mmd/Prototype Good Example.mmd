@@ -1,0 +1,37 @@
+
+classDiagram
+
+    class IShape {
+      <<Interface>>
+      +Draw() : void
+      +Duplicate() : IShape
+    }
+
+    class Circle{
+      +radius : int
+      +Draw() : void
+      +Duplicate() : IShape
+    }
+
+    class Square{
+      +side : int
+      +Draw() : void
+      +Duplicate() : IShape
+    }
+
+    class Rectangle{
+      +width : int
+      +height : int
+      +Draw() : void
+      +Duplicate() : IShape
+    }
+
+    class ShapeAction{
+      +Duplicate(shape : Ishape) : IShape
+    }
+
+    IShape <|.. Circle : implements
+    IShape <|.. Square : implements
+    IShape <|.. Rectangle: implements
+    ShapeAction --> IShape : Application Action
+

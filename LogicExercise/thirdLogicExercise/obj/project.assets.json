@@ -14,11 +14,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Documents\\Batch16\\thirdLogicExercise\\thirdLogicExercise.csproj",
+      "projectUniqueName": "D:\\Documents\\Batch16\\LogicExercise\\thirdLogicExercise\\thirdLogicExercise.csproj",
       "projectName": "thirdLogicExercise",
-      "projectPath": "D:\\Documents\\Batch16\\thirdLogicExercise\\thirdLogicExercise.csproj",
+      "projectPath": "D:\\Documents\\Batch16\\LogicExercise\\thirdLogicExercise\\thirdLogicExercise.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "D:\\Documents\\Batch16\\thirdLogicExercise\\obj\\",
+      "outputPath": "D:\\Documents\\Batch16\\LogicExercise\\thirdLogicExercise\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

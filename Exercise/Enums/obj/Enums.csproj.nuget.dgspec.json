@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Documents\\Batch16\\Enums\\Enums.csproj": {}
+    "D:\\Documents\\Batch16\\Exercise\\Enums\\Enums.csproj": {}
   },
   "projects": {
-    "D:\\Documents\\Batch16\\Enums\\Enums.csproj": {
+    "D:\\Documents\\Batch16\\Exercise\\Enums\\Enums.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Documents\\Batch16\\Enums\\Enums.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\Exercise\\Enums\\Enums.csproj",
         "projectName": "Enums",
-        "projectPath": "D:\\Documents\\Batch16\\Enums\\Enums.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\Exercise\\Enums\\Enums.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "D:\\Documents\\Batch16\\Enums\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\Exercise\\Enums\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
