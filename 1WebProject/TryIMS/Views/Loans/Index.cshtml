@@ -1,0 +1,25 @@
+
+@model IEnumerable<CompanyInventory.Web.Models.Loan>
+<h2>Loans</h2>
+<p>/Loans/Borrow Item</a></p>
+<table class="table table-striped">
+<thead><tr><th>Item</th><th>Qty</th><th>Borrower</th><th>Borrowed</th><th>Status</th><th></th></tr></thead>
+<tbody>
+@foreach (var l in Model)
+{
+    <tr>
+        <td>@l.Item?.Name</td>
+        <td>@l.Quantity</td>
+        <td>@l.Borrower</td>
+        <td>@l.BorrowedAt.ToLocalTime()</td>
+        <td>@l.Status</td>
+        <td>
+            @if (l.Status == CompanyInventory.Web.Models.LoanStatus.Borrowed)
+            {
+                <a asp-controller="Loans" asp-action="Return" asp-route-id="@l.Id">Return</a>
+            }
+        </td>
+    </tr>
+}
+</tbody>
+</table>

@@ -1,0 +1,18 @@
+
+@model CompanyInventory.Web.Models.Consumption
+@{
+    var items = (IEnumerable<CompanyInventory.Web.Models.Item>)ViewBag.Items;
+}
+<h2>Take Consumable</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Consumable</label>
+        <select class="form-select" name="itemId">
+            @foreach (var i in items) { <option value="@i.Id">@i.Name (@i.QuantityOnHand avail)</option> }
+        </select>
+    </div>
+    <div class="mb-3"><label>Quantity</label><input class="form-control" name="quantity" type="number" min="1" /></div>
+    <div class="mb-3"><label>Taken By</label><input class="form-control" name="takenBy" /></div>
+    <div class="mb-3"><label>Notes</label><input class="form-control" name="notes" /></div>
+    <button class="btn btn-primary" type="submit">Take</button>
+</form>

@@ -1,0 +1,22 @@
+
+@model CompanyInventory.Web.Models.ItemRequest
+@{
+    var items = (IEnumerable<CompanyInventory.Web.Models.Item>)ViewBag.Items;
+}
+<h2>New Request</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Existing Item (optional)</label>
+        <select class="form-select" name="itemId">
+            <option value="">-- none --</option>
+            @foreach (var i in items) { <option value="@i.Id">@i.Name</option> }
+        </select>
+    </div>
+    <div class="mb-3">
+        <label>Description (if not existing)</label>
+        <input class="form-control" name="description" />
+    </div>
+    <div class="mb-3"><label>Quantity</label><input class="form-control" name="quantity" type="number" min="1" /></div>
+    <div class="mb-3"><label>Requested By</label><input class="form-control" name="requestedBy" /></div>
+    <button class="btn btn-primary" type="submit">Submit Request</button>
+</form>

@@ -1,0 +1,11 @@
+
+@model CompanyInventory.Web.Models.ItemRequest
+<h2>@ViewContext.RouteData.Values["action"] Request</h2>
+<p>Item/Desc: <strong>@(Model.Item?.Name ?? Model.Description)</strong></p>
+<p>Quantity: <strong>@Model.Quantity</strong></p>
+<p>Requested By: <strong>@Model.RequestedBy</strong></p>
+<form method="post">
+    <div class="mb-3"><label>Processed By</label><input class="form-control" name="approvedBy" /></div>
+    <button class="btn btn-primary" type="submit">Confirm</button>
+</form>
+<div class="text-danger">@Html.ValidationSummary()</div>

@@ -1,0 +1,18 @@
+@model CompanyInventory.Web.Models.Loan
+@{
+    var items = (IEnumerable<CompanyInventory.Web.Models.Item>)ViewBag.Items;
+}
+<h2>Borrow Item</h2>
+<form method="post">
+    <div class="mb-3">
+        <label>Item</label>
+        <select class="form-select" name="itemId">
+            @foreach (var i in items) { <option value="@i.Id">@i.Name (@i.QuantityOnHand avail)</option> }
+        </select>
+    </div>
+    <div class="mb-3"><label>Quantity</label><input class="form-control" name="quantity" type="number" min="1" /></div>
+    <div class="mb-3"><label>Borrower</label><input class="form-control" name="borrower" /></div>
+    <div class="mb-3"><label>Due At (optional)</label><input class="form-control" name="dueAt" type="date" /></div>
+    <button class="btn btn-primary" type="submit">Borrow</button>
+</form>
+<div class="text-danger">@Html.ValidationSummary()</div>

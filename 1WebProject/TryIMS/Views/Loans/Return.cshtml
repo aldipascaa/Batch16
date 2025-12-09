@@ -1,0 +1,10 @@
+
+@model CompanyInventory.Web.Models.Loan
+<h2>Return Loan</h2>
+<p>Item: <strong>@Model.Item?.Name</strong></p>
+<p>Quantity: <strong>@Model.Quantity</strong></p>
+<p>Borrower: <strong>@Model.Borrower</strong></p>
+<form method="post">
+    <button class="btn btn-success" type="submit">Confirm Return</button>
+</form>
+<div class="text-danger">@Html.ValidationSummary()</div>

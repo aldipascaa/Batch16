@@ -1,0 +1,26 @@
+@model IEnumerable<CompanyInventory.Web.Models.Item>
+@{
+    ViewData["Title"] = "Items";
+}
+<h2>Items</h2>
+<p>/Items/CreateAdd Item</a></p>
+<table class="table table-striped">
+    <thead><tr><th>Name</th><th>SKU</th><th>Consumable</th><th>On Hand</th><th></th></tr></thead>
+    <tbody>
+    @foreach (var i in Model)
+    {
+        <tr>
+            <td>@i.Name</td>
+            <td>@i.Sku</td>
+            <td>@(i.IsConsumable ? "Yes" : "No")</td>
+            <td>@i.QuantityOnHand</td>
+            <td>/Items/Edit/@i.Id</td>
+        </tr>
+    }
+    </tbody>
+</table>
+<p>
+    /LoansLoans</a>
+    /ConsumptionsConsumptions</a>
+    /RequestsRequests</a>
+</p>

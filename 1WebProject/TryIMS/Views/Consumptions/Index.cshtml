@@ -1,0 +1,18 @@
+
+@model IEnumerable<CompanyInventory.Web.Models.Consumption>
+<h2>Consumptions</h2>
+<p>/Consumptions/TakeTake Consumable</a></p>
+<table class="table table-striped">
+<thead><tr><th>Item</th><th>Qty</th><th>Taken By</th><th>Taken At</th><th>Notes</th></tr></thead>
+<tbody>
+@foreach (var c in Model)
+{
+    <tr>
+        <td>@c.Item?.Name</td>
+        <td>@c.Quantity</td>
+        <td>@c.TakenBy</td>
+        <td>@c.TakenAt.ToLocalTime()</td>
+        <td>@c.Notes</td>
+    </tr>
+}
+</tbody>

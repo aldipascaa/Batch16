@@ -1,0 +1,26 @@
+
+@model IEnumerable<CompanyInventory.Web.Models.ItemRequest>
+<h2>Requests</h2>
+<p>/Requests/CreateNew Request</a></p>
+<table class="table table-striped">
+<thead><tr><th>Requested</th><th>Qty</th><th>By</th><th>Status</th><th></th></tr></thead>
+<tbody>
+@foreach (var r in Model)
+{
+    <tr>
+        <td>@(r.Item?.Name ?? r.Description)</td>
+        <td>@r.Quantity</td>
+        <td>@r.RequestedBy</td>
+        <td>@r.Status</td>
+        <td>
+            @if (r.Status == CompanyInventory.Web.Models.RequestStatus.Pending)
+            {
+                    <a href="@Url.Action("Approve", "Requests", new { id = r.Id})">Approve</a>
+                     
+                    <a href="@Url.Action("Reject", "Requests", new { id = r.Id})">Reject</a>
+            }
+        </td>
+    </tr>
+}
+</tbody>
+</table>

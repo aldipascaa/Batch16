@@ -1,0 +1,13 @@
+
+@model CompanyInventory.Web.Models.Item
+<h2>Create Item</h2>
+<form method="post">
+    <div class="mb-3"><label>Name</label><input class="form-control" asp-for="Name" /></div>
+    <div class="mb-3"><label>SKU</label><input class="form-control" asp-for="Sku" /></div>
+    <div class="form-check mb-3">
+        <input class="form-check-input" asp-for="IsConsumable" />
+        <label class="form-check-label">Is Consumable</label>
+    </div>
+    <div class="mb-3"><label>Quantity On Hand</label><input class="form-control" asp-for="QuantityOnHand" type="number" /></div>
+    <button class="btn btn-primary" type="submit">Save</button>
+</form>
