@@ -8,6 +8,5 @@ public class Doctor : IDoctor
     public string FullName { get; set; } = string.Empty;
     public int DepartmentId { get; set; }
     public IDepartment? Department { get; set; }
-
     public ICollection<IAppointment> Appointments { get; set; } = new List<IAppointment>();
 }
