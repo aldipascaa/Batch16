@@ -1,44 +1,32 @@
 ﻿using System.ComponentModel;
 using System.Linq.Expressions;
 using System.Text;
+
 namespace LogicExercise;
 
 class Program
 {
-    static void Main(string[] args)
+    static void Main()
     {
         Console.WriteLine("Pick a number!!");
         int x = Convert.ToInt32(Console.ReadLine());
-        //ThirdLogic(x);
-        //Console.WriteLine("");
-        // Demonstration using MyClass to add logic at runtime
-        var my = new MyClass();
-        my.AddLogic(3, "foo");
-        my.AddLogic(4, "baz");
-        my.AddLogic(5, "bar");
-        my.AddLogic(7, "jazz");
-        my.AddLogic(9, "huzz");
-        my.PrintRange(x);
+        MyClass myClass = new MyClass();
+        myClass.AddRule(3, "foo");
+        myClass.AddRule(4, "baz");
+        myClass.AddRule(5, "bar");
+        myClass.AddRule(7, "jazz");
+        myClass.AddRule(9, "huzz");
+        myClass.PrintRange(x);
     }
-    // First Logic Implementation using if-else statements
     static void FirstLogic(int x)
     {
         for (int i = 1; i <= x;i++)
         {
-            if (i % 3 == 0 & i % 5 == 0){
-                Console.Write("foobar");
-            }
-            else if (i % 3 == 0){
-                Console.Write("foo");
-            }
-            else if (i % 5 == 0){
-                Console.Write("bar");
-            }
+            if (i % 3 == 0 & i % 5 == 0) Console.Write("foobar");
+            else if (i % 3 == 0) Console.Write("foo");
+            else if (i % 5 == 0) Console.Write("bar");
             else Console.Write(i);
-            if (i != x)
-            {
-            Console.Write(",");
-            }
+            if (i != x) Console.Write(", ");
         }
     }
     // Refactored SecondLogic using boolean variables
@@ -51,7 +39,7 @@ class Program
             bool logic3 = i % 7 == 0;
             Console.Write((logic1 ? "foo" : "") + (logic2 ? "bar" : "") + (logic3 ? "jazz" : ""));
             if (i!=x)
-                Console.Write(logic1 || logic2 || logic3?",": $"{i},");
+                Console.Write(logic1 || logic2 || logic3?", ": $"{i}, ");
         }
     }
     // Refactored ThirdLogic using Dictionary
@@ -69,18 +57,20 @@ class Program
         // Loop through numbers from 1 to x
         for (int i = 1; i <= x; i++)
         {
-            string output = "";
-            foreach (var (key,value) in dictionary) output += i % key == 0 ? value : "";
-            if (i != x) output += output != "" ? "," : $"{i},";
+            var output = new StringBuilder();
+            var outputLengthBefore = output.Length;
+            foreach (var (key,value) in dictionary) output.Append(i % key == 0 ? value : "");
+            if (outputLengthBefore == output.Length) output.Append(i);
+            if (i != x) output.Append(output.Length > 0 ? ", " : $"{i}, ");
             Console.Write(output);
         };
     }
     // Refactored FourthLogic that holds logic rules and allows adding new ones at runtime.
     class MyClass
     {
-        private readonly List<KeyValuePair<int, string>> _rules = new();
+        private readonly List<(int Key, string Value)> _rules = new();
         // Preferred C# naming
-        public void AddLogic(int key, string value)=> _rules.Add(new KeyValuePair<int, string>(key, value));
+        public void AddRule(int key, string value)=> _rules.Add((key, value));
         public string GetOutputFor(int i)
         {
             var sb = new StringBuilder();
@@ -93,7 +83,7 @@ class Program
             for (int i = 1; i <= x; i++)
             {
                 Console.Write(GetOutputFor(i));
-                if (i != x) Console.Write(",");
+                if (i != x) Console.Write(", ");
             }
         }
     }
