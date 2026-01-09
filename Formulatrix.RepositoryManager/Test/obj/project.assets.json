@@ -5656,11 +5656,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Test\\Test.csproj",
+      "projectUniqueName": "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Test\\Test.csproj",
       "projectName": "Test",
-      "projectPath": "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Test\\Test.csproj",
+      "projectPath": "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Test\\Test.csproj",
       "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-      "outputPath": "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Test\\obj\\",
+      "outputPath": "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Test\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
@@ -5675,8 +5675,8 @@
         "net8.0": {
           "targetAlias": "net8.0",
           "projectReferences": {
-            "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj": {
-              "projectPath": "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj"
+            "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj": {
+              "projectPath": "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj"
             }
           }
         }

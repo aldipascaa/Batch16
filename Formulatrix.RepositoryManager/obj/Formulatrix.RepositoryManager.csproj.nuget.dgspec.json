@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj": {}
+    "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj": {}
   },
   "projects": {
-    "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj": {
+    "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj",
+        "projectUniqueName": "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj",
         "projectName": "Formulatrix.RepositoryManager",
-        "projectPath": "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj",
+        "projectPath": "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\Formulatrix.RepositoryManager.csproj",
         "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
-        "outputPath": "d:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\obj\\",
+        "outputPath": "D:\\Documents\\Batch16\\Formulatrix.RepositoryManager\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config"
