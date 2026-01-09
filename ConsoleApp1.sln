@@ -75,6 +75,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryIMS", "1WebProject\TryIM
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Inventory", "1WebProject\Inventory\Inventory.csproj", "{000C57A5-F96B-4414-9CA3-1519412E0773}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Formulatrix.RepositoryManager", "Formulatrix.RepositoryManager\Formulatrix.RepositoryManager.csproj", "{365EFD54-F615-4603-AB7B-04E508B1CFFC}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -493,6 +495,18 @@ Global
 		{000C57A5-F96B-4414-9CA3-1519412E0773}.Release|x64.Build.0 = Release|Any CPU
 		{000C57A5-F96B-4414-9CA3-1519412E0773}.Release|x86.ActiveCfg = Release|Any CPU
 		{000C57A5-F96B-4414-9CA3-1519412E0773}.Release|x86.Build.0 = Release|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Debug|x64.Build.0 = Debug|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Debug|x86.Build.0 = Debug|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Release|x64.ActiveCfg = Release|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Release|x64.Build.0 = Release|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Release|x86.ActiveCfg = Release|Any CPU
+		{365EFD54-F615-4603-AB7B-04E508B1CFFC}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
