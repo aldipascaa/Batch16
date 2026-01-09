@@ -1,0 +1,12 @@
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\Formulatrix.RepositoryManager.GeneratedMSBuildEditorConfig.editorconfig
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\Formulatrix.RepositoryManager.AssemblyInfoInputs.cache
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\Formulatrix.RepositoryManager.AssemblyInfo.cs
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\Formulatrix.RepositoryManager.csproj.CoreCompileInputs.cache
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\Formulatrix.RepositoryManager.sourcelink.json
+d:\Documents\Batch16\Formulatrix.RepositoryManager\bin\Debug\net8.0\Formulatrix.RepositoryManager.deps.json
+d:\Documents\Batch16\Formulatrix.RepositoryManager\bin\Debug\net8.0\Formulatrix.RepositoryManager.dll
+d:\Documents\Batch16\Formulatrix.RepositoryManager\bin\Debug\net8.0\Formulatrix.RepositoryManager.pdb
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\Formulatrix.RepositoryManager.dll
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\refint\Formulatrix.RepositoryManager.dll
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\Formulatrix.RepositoryManager.pdb
+d:\Documents\Batch16\Formulatrix.RepositoryManager\obj\Debug\net8.0\ref\Formulatrix.RepositoryManager.dll

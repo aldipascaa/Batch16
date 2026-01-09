@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Formulatrix.RepositoryManager")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8056787b7288d0d96c6ea51be200374b3874d2ff")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8487cd62ad489e201d17308d360af8249c13cf3c")]
 [assembly: System.Reflection.AssemblyProductAttribute("Formulatrix.RepositoryManager")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Formulatrix.RepositoryManager")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
